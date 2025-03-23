@@ -17,7 +17,7 @@ const Hero = () => {
     { path: "/vodafone.svg", name: "Vodafone" },
   ];
 
-  const changingTexts = ["SMEs", "Apprentices", "Universities"];
+  const changingTexts = ["SMEs", "Talented Apprentices"];
 
   // Text animation effect
   useEffect(() => {
@@ -51,10 +51,10 @@ const Hero = () => {
             className="w-full lg:w-1/2 mb-8 lg:mb-0"
           >
             <div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Connect Talented{" "}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                Connect with{" "}
               </h1>
-              <div className="h-[64px] mt-4 sm:h-[60px] md:h-[76px] overflow-hidden">
+              <div className="sm:my-3 md:my-4 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.h1
                     key={currentTextIndex}
@@ -62,13 +62,13 @@ const Hero = () => {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -40, opacity: 0 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className="text-4xl sm:text-5xl md:text-6xl font-bold text-burgundy leading-tight"
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold text-burgundy leading-tight"
                   >
                     {changingTexts[currentTextIndex]}
                   </motion.h1>
                 </AnimatePresence>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                 For Growth
               </h1>
               <p className="mt-6 text-xl text-gray-600 max-w-2xl">
