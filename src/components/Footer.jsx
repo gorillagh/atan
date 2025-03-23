@@ -8,9 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
             <h3 className="text-2xl font-bold text-white mb-6">ATAN</h3>
-            <p className="text-gray-400 mb-6">
-              Africa Technical Apprentice Network - Bridging the gap between
-              technical education and employment across Africa.
+            <p className="text-gray-400 mb-2">
+              Connecting Africa's talent with opportunity through
+              apprenticeships.
+            </p>
+            <p className="text-gray-400 mb-6 font-medium">
+              Empowering Africa's Future Workforce
             </p>
             <div className="flex space-x-4">
               <a
@@ -125,18 +128,10 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="#tools"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Success Stories
+                  RIO Calculator
                 </a>
               </li>
               <li>
@@ -149,18 +144,19 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#tools"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Events
+                  Success Stories
                 </a>
               </li>
+
               <li>
                 <a
-                  href="#"
+                  href="#about"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Press Releases
+                  Blog
                 </a>
               </li>
             </ul>
@@ -170,13 +166,13 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-white mb-6">Contact</h4>
             <ul className="space-y-3 text-gray-400">
               <li>info@atanafrica.com</li>
-              <li>+234 123 456 7890</li>
+              <li>+233 123 456 7890</li>
               <li>
                 ATAN Headquarters
                 <br />
                 123 Innovation Drive
                 <br />
-                Lagos, Nigeria
+                Accra, Ghana
               </li>
             </ul>
           </div>

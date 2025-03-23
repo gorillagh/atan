@@ -10,36 +10,34 @@ const Apprentices = () => {
     title: "Apprentices",
     icon: FaGraduationCap,
     description:
-      "Gain practical industry experience, build professional networks, and secure meaningful employment through ATAN's apprenticeship programs.",
+      "Launch your career by gaining hands-on experience with Africa’s leading SMEs.",
     features: [
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Hands-on Experience",
-        description:
-          "Gain practical skills through structured apprenticeships with leading employers.",
+        title: "Real-World Skills",
+        description: "Learn by doing in structured SME apprenticeships.",
       },
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Mentorship",
-        description:
-          "Access industry mentors who provide guidance throughout your apprenticeship.",
+        title: "Expert Mentorship",
+        description: "Get guidance from industry professionals.",
       },
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Employment Pathways",
-        description:
-          "Most apprenticeships lead to full-time employment opportunities.",
+        title: "Career Opportunities",
+        description: "Turn your apprenticeship into a full-time role.",
       },
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Professional Network",
-        description:
-          "Connect with peers and professionals across the African tech ecosystem.",
+        title: "Build Connections",
+        description: "Network with peers and tech leaders across Africa.",
       },
     ],
-    ctaText: "Apply for an Apprenticeship",
+    ctaText: "Apply as an Apprentice",
     bgColor: "bg-gray-50",
-    image: "/apprentices-image.jpg",
+    image: "for_employers.webp",
+    ctaLink:
+      "https://docs.google.com/forms/d/1QqaMzo8JNZzq_HW-NbF4Whykbf1BuKmKTRXm9qEC2N8/viewform?ts=6798a257&edit_requested=true",
   };
 
   return <Audience {...apprenticesContent} />;

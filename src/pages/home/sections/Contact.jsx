@@ -49,7 +49,7 @@ const Contact = () => {
 
               <div>
                 <h4 className="font-bold text-gray-900 mb-2">Phone</h4>
-                <p className="text-burgundy">+234 123 456 7890</p>
+                <p className="text-burgundy">+233 123 456 7890</p>
               </div>
 
               <div>
@@ -59,7 +59,7 @@ const Contact = () => {
                   <br />
                   123 Innovation Drive
                   <br />
-                  Lagos, Nigeria
+                  Accra, Ghana
                 </p>
               </div>
 

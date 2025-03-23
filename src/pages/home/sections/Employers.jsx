@@ -4,42 +4,41 @@ import { FaBriefcase } from "react-icons/fa";
 import { BsCheck2Circle } from "react-icons/bs";
 import { FaCalculator } from "react-icons/fa";
 import Audience from "./Audience";
+
 const Employers = () => {
   const employersContent = {
     id: "employers",
     title: "Employers",
     icon: FaBriefcase,
     description:
-      "Partner with ATAN to access pre-screened technical talent, reduce recruitment costs, and contribute to workforce development across Africa.",
+      "Unlock your SME’s potential by connecting with talented recent graduates eager to make a difference.",
     features: [
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Access Vetted Talent",
-        description:
-          "All apprentices undergo rigorous technical assessments and soft skills evaluations.",
+        title: "Skilled Graduates",
+        description: "Access pre-screened talent ready to contribute.",
       },
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Reduce Recruitment Costs",
-        description:
-          "Save on traditional hiring while training future employees aligned with your specific needs.",
+        title: "Cost-Effective Hiring",
+        description: "Save on recruitment with tailored apprenticeships.",
       },
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Improve Diversity",
-        description:
-          "Expand your talent pool with diverse candidates from across the African continent.",
+        title: "Diverse Talent Pool",
+        description: "Hire from across Africa for fresh perspectives.",
       },
       {
         icon: <FaCalculator size={20} />,
-        title: "Compelling ROI",
-        description:
-          "Calculate your potential return on investment with our interactive tool.",
+        title: "Measure ROI",
+        description: "Use our tool to calculate your hiring benefits.",
       },
     ],
-    ctaText: "Become an Employer Partner",
-    bgColor: "bg-gray-50",
-    image: "/employer-image.jpg",
+    ctaText: "Join as an SME Partner",
+    bgColor: "bg-gray-100",
+    image: "for_apprentices",
+    ctaLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfLAqoxl6C4PRUGSyvGPhcd3vA0N_nZ-M4O1WmTnwy8jaYNsQ/viewform",
   };
 
   return <Audience {...employersContent} />;

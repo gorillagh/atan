@@ -10,29 +10,29 @@ const Testimonials = () => {
       role: "Software Developer & ATAN Alumnus",
       company: "TechCorp Ghana",
       quote:
-        "The ATAN program gave me practical skills that my university courses didn't cover. Within 3 months of completing my apprenticeship, I was hired full-time.",
-      image: "/api/placeholder/100/100",
+        "ATAN connected me with an SME where I gained hands-on experience. Now, I'm a full-time developer making a real impact.",
+      image: "/sarah.webp",
     },
     {
       name: "Michael Okafor",
       role: "HR Director",
       company: "AfriTech Solutions",
       quote:
-        "Hiring through ATAN has transformed our junior developer onboarding. The apprentices come ready to contribute with minimal training time required.",
-      image: "/api/placeholder/100/100",
+        "As an SME, ATAN has been a game-changer. We hire skilled graduates who hit the ground running, saving us time and resources.",
+      image: "/michael.webp",
     },
     {
       name: "Dr. Aminata Diallo",
       role: "Dean of Computer Sciences",
       company: "Senegal Institute of Technology",
       quote:
-        "Our partnership with ATAN has significantly improved our curriculum relevance and strengthened our industry connections.",
-      image: "/api/placeholder/100/100",
+        "ATAN bridges the gap between academia and industry. Our students now have direct access to SME apprenticeship opportunities.",
+      image: "/aminata.webp",
     },
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2

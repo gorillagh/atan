@@ -10,36 +10,35 @@ const Universities = () => {
     title: "Universities",
     icon: FaUniversity,
     description:
-      "Enhance your curriculum relevance, provide industry exposure to students, and improve graduate employment outcomes through ATAN partnerships.",
+      "Prepare your students for industry success by connecting with SMEs and offering real-world opportunities.",
     features: [
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Industry-Aligned Curriculum",
-        description:
-          "Collaborate with employers to ensure curriculum meets current industry demands.",
+        title: "Industry-Relevant Skills",
+        description: "Align curriculum with SME needs for job-ready graduates.",
       },
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Student Opportunities",
+        title: "Real-World Experience",
         description:
-          "Create pathways for students to gain practical experience before graduation.",
+          "Provide students with hands-on apprenticeship opportunities.",
       },
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Improved Graduate Outcomes",
-        description:
-          "Increase employment rates for graduates through structured apprenticeship programs.",
+        title: "Boost Employment Rates",
+        description: "Improve graduate outcomes through SME partnerships.",
       },
       {
         icon: <BsCheck2Circle size={20} />,
-        title: "Research Partnerships",
-        description:
-          "Develop joint research initiatives with industry partners through ATAN connections.",
+        title: "Collaborative Research",
+        description: "Engage in joint projects with industry for innovation.",
       },
     ],
-    ctaText: "Partner with ATAN",
+    ctaText: "Join as a University Partner",
     bgColor: "bg-white",
-    image: "/universities-image.jpg",
+    image: "for_universities.webp",
+    ctaLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfLAqoxl6C4PRUGSyvGPhcd3vA0N_nZ-M4O1WmTnwy8jaYNsQ/viewform",
   };
 
   return <Audience {...universitiesContent} />;

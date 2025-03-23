@@ -11,13 +11,14 @@ const Audience = ({
   ctaText,
   bgColor,
   image,
+  ctaLink,
 }) => {
   const Icon = icon;
 
   return (
     <section id={id} className={`py-20 ${bgColor}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex  flex-col lg:flex-row  items-center gap-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +57,8 @@ const Audience = ({
             </div>
 
             <a
-              href="#"
+              href={ctaLink}
+              target="_blank"
               className="inline-block px-8 py-3 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors"
             >
               {ctaText}
@@ -72,7 +74,14 @@ const Audience = ({
           >
             <div className="relative rounded-2xl overflow-hidden bg-white/40 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
               {/* Replace with relevant image for each audience */}
-              <div className="absolute inset-0 bg-[url('/api/placeholder/600/450')] bg-cover bg-center"></div>
+              {id === "employers" ? (
+                <div className="absolute inset-0 bg-[url(/for_employers.webp)] bg-cover bg-center"></div>
+              ) : id === "apprentices" ? (
+                <div className="absolute inset-0 bg-[url(/for_apprentices.webp)] bg-cover bg-center"></div>
+              ) : (
+                <div className="absolute inset-0 bg-[url(/for_universities.webp)] bg-cover bg-center"></div>
+              )}
+
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-burgundy/40"></div>
 
               {/* Custom UI element for each section */}

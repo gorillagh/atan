@@ -13,8 +13,8 @@ const Home = () => {
       <Hero />
       <About />
       <Employers />
-      <Universities />
       <Apprentices />
+      <Universities />
       <Testimonials />
       <Tools />
       <Contact />

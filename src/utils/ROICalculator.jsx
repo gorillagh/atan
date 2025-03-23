@@ -25,8 +25,7 @@ const ROICalculator = () => {
     >
       <h3 className="text-2xl font-bold text-gray-900 mb-6">ROI Calculator</h3>
       <p className="text-gray-600 mb-6">
-        Estimate the return on investment for hiring ATAN apprentices at your
-        organization.
+        Estimate the return on investment for hiring ATAN apprentices.
       </p>
 
       <div className="space-y-6">

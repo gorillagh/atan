@@ -9,27 +9,27 @@ const FAQAccordion = () => {
     {
       question: "What is the ATAN apprenticeship program?",
       answer:
-        "The ATAN apprenticeship program connects talented African technical talent with employers for structured, hands-on training opportunities. The program typically lasts 3-12 months and focuses on bridging the gap between academic knowledge and practical industry skills.",
+        "ATAN connects talented recent graduates with SMEs across Africa for hands-on apprenticeships, typically lasting 3-12 months. These programs bridge the gap between academic knowledge and real-world industry skills.",
     },
     {
       question: "How do employers benefit from hiring apprentices?",
       answer:
-        "Employers benefit by accessing pre-screened talent, reducing recruitment costs, training future employees aligned with their specific needs, and contributing to workforce development in Africa. Many employers report significant ROI from converting apprentices into full-time employees.",
+        "SMEs gain access to pre-screened, skilled graduates ready to contribute, reducing recruitment costs and training time. Apprenticeships often lead to full-time hires, offering a strong ROI while supporting Africa's workforce development.",
     },
     {
       question: "What role do universities play in ATAN?",
       answer:
-        "Universities partner with ATAN to enhance curriculum relevance, provide industry exposure to students, and improve graduate employment outcomes. ATAN works with universities to identify promising candidates and create pathways for students to gain practical experience.",
+        "Universities partner with ATAN to align curricula with industry needs, connect students to SME apprenticeship opportunities, and boost graduate employment rates.",
     },
     {
       question: "Who can apply to be an apprentice?",
       answer:
-        "ATAN apprenticeships are open to recent graduates and early-career professionals in technical fields across Africa. Candidates should have a degree or diploma in a relevant field, strong academic performance, and demonstrated interest in their chosen technical area.",
+        "Recent graduates and early-career professionals in technical fields across Africa can apply. Candidates need a relevant degree or diploma, strong academics, and a passion for their field.",
     },
     {
       question: "What is the application process?",
       answer:
-        "The application process involves submitting an online application, completing a technical assessment, and participating in interviews. Successful candidates are matched with employer partners based on skills, interests, and employer needs.",
+        "Apply online, complete a technical assessment, and interview. Successful candidates are matched with SMEs based on skills and interests.",
     },
   ];
 
