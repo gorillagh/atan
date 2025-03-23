@@ -117,9 +117,12 @@ const Navbar = () => {
               transition={{ duration: 0.6 }}
               className="flex-shrink-0"
             >
-              <a href="#" className="flex items-center">
+              <a href="#" className="flex flex-col items-start">
                 <span className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-burgundy to-burgundy/80 bg-clip-text text-transparent">
                   ATAN
+                </span>
+                <span className="text-sm italic sm:text-xs  tracking-tight bg-gradient-to-r from-burgundy to-burgundy/80 bg-clip-text text-transparent">
+                  Africa Technical Apprentice Network
                 </span>
               </a>
             </motion.div>
