@@ -83,9 +83,9 @@ const Employers = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-lg bg-white/80 backdrop-blur-sm shadow-sm border border-gray-100"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white/80 backdrop-blur-sm shadow-sm border border-gray-100"
                 >
-                  <div className="mt-1 bg-burgundy/10 p-2 rounded-md">
+                  <div className="mt-1 bg-burgundy/10 p-2 rounded-xl">
                     {feature.icon}
                   </div>
                   <div>
@@ -100,7 +100,7 @@ const Employers = () => {
               <a
                 href={employersContent.ctaLink}
                 target="_blank"
-                className="inline-flex items-center px-8 py-3 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors"
+                className="inline-flex items-center px-8 py-3 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors"
               >
                 {employersContent.ctaText} <FaArrowRight className="ml-2" />
               </a>
@@ -121,7 +121,7 @@ const Employers = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:w-1/2"
           >
-            <div className="relative rounded-2xl overflow-hidden bg-white/40 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
+            <div className="relative rounded-3xl overflow-hidden bg-white/40 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
               <div className="absolute inset-0 bg-[url(/for_employers.webp)] bg-cover bg-center"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-burgundy/40"></div>
 
@@ -133,7 +133,7 @@ const Employers = () => {
                 <p className="text-sm text-gray-600 mb-3">
                   See how hiring apprentices can benefit your organization
                 </p>
-                <div className="bg-gray-100 rounded-md p-2 text-sm">
+                <div className="bg-gray-100 rounded-lg p-2 text-sm">
                   Average ROI:{" "}
                   <span className="font-bold text-burgundy">124%</span> within
                   first year
@@ -159,7 +159,7 @@ const Employers = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8"
+              className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-6">
@@ -290,7 +290,7 @@ const Employers = () => {
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 p-4 rounded-lg border border-gray-100 mt-6">
+                <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 mt-6">
                   <h4 className="font-bold text-gray-900 mb-2">
                     Ready to Grow Your Team?
                   </h4>
@@ -302,7 +302,7 @@ const Employers = () => {
                   <a
                     href={employersContent.ctaLink}
                     target="_blank"
-                    className="inline-flex items-center px-6 py-2 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors text-sm"
+                    className="inline-flex items-center px-6 py-2 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors text-sm"
                   >
                     Apply as an SME Partner <FaArrowRight className="ml-2" />
                   </a>

@@ -67,7 +67,7 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="bg-white rounded-xl shadow-2xl w-full max-w-md mx-4 overflow-hidden"
+              className="bg-white rounded-3xl shadow-2xl w-full max-w-md mx-4 overflow-hidden"
             >
               <div className="p-5 bg-burgundy/5 border-b border-gray-100 flex justify-between items-center">
                 <h3 className="text-xl font-bold text-gray-900">
@@ -96,7 +96,7 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
                       whileTap={{ scale: 0.98 }}
                       onClick={toggleModal}
                       target="_blank"
-                      className="block p-4 border border-gray-200 rounded-lg hover:border-burgundy/30 hover:bg-burgundy/5 transition-all flex items-start gap-2 sm:gap-4"
+                      className="block p-4 border border-gray-200 rounded-3xl hover:border-burgundy/30 hover:bg-burgundy/5 transition-all flex items-start gap-2 sm:gap-4"
                     >
                       <div className="mt-1">{option.icon}</div>
                       <div>

@@ -76,7 +76,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform transition-all hover:shadow-xl">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform transition-all hover:shadow-xl">
               <h4 className="font-bold text-xl text-gray-900 border-l-4 border-burgundy pl-4 mb-5">
                 How ATAN Works
               </h4>
@@ -129,7 +129,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl relative">
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
               <img
                 src="/about_image.webp"
                 alt="ATAN's impact in Africa"
@@ -143,14 +143,14 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-10 bg-white rounded-xl p-8 shadow-xl border border-gray-100 relative transform -translate-y-6 mx-4"
+              className="mt-10 bg-white rounded-2xl p-8 shadow-xl border border-gray-100 relative transform -translate-y-6 mx-4"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                 Our Impact
               </h3>
 
               <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-5 bg-burgundy/5 rounded-lg border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
+                <div className="text-center p-5 bg-burgundy/5 rounded-xl border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
                   <div className="text-4xl font-extrabold text-burgundy">
                     500+
                   </div>
@@ -158,7 +158,7 @@ const About = () => {
                     Graduates Connected
                   </div>
                 </div>
-                <div className="text-center p-5 bg-burgundy/5 rounded-lg border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
+                <div className="text-center p-5 bg-burgundy/5 rounded-xl border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
                   <div className="text-4xl font-extrabold text-burgundy">
                     80%
                   </div>
@@ -166,7 +166,7 @@ const About = () => {
                     Job Placement Rate
                   </div>
                 </div>
-                <div className="text-center p-5 bg-burgundy/5 rounded-lg border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
+                <div className="text-center p-5 bg-burgundy/5 rounded-xl border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
                   <div className="text-4xl font-extrabold text-burgundy">
                     50+
                   </div>
@@ -174,7 +174,7 @@ const About = () => {
                     SME Partners
                   </div>
                 </div>
-                <div className="text-center p-5 bg-burgundy/5 rounded-lg border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
+                <div className="text-center p-5 bg-burgundy/5 rounded-xl border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
                   <div className="text-4xl font-extrabold text-burgundy">
                     12
                   </div>
@@ -274,7 +274,7 @@ const About = () => {
             <div className="mt-8 flex justify-end">
               <button
                 onClick={() => setShowModal(false)}
-                className="px-6 py-2 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors"
+                className="px-6 py-2 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors"
               >
                 Close
               </button>

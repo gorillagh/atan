@@ -35,7 +35,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="md:col-span-2 bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-md"
+            className="md:col-span-2 bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-md"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Contact Information
@@ -124,7 +124,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="md:col-span-3 bg-white p-8 rounded-xl border border-gray-100 shadow-lg"
+            className="md:col-span-3 bg-white p-8 rounded-2xl border border-gray-100 shadow-lg"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Send Us a Message
@@ -142,7 +142,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
                     placeholder="Your full name"
                   />
                 </div>
@@ -156,7 +156,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
                     placeholder="Your email address"
                   />
                 </div>
@@ -171,7 +171,7 @@ const Contact = () => {
                 </label>
                 <select
                   id="subject"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
                 >
                   <option value="" disabled selected>
                     Select a subject
@@ -193,7 +193,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
                   placeholder="Your message..."
                 ></textarea>
               </div>
@@ -201,7 +201,7 @@ const Contact = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors flex items-center justify-center"
+                  className="w-full px-6 py-3 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors flex items-center justify-center"
                 >
                   Send Message
                 </button>

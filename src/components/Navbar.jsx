@@ -157,7 +157,7 @@ const Navbar = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={toggleModal}
-                  className="ml-1 sm:ml-2 px-3 sm:px-4 lg:px-5 py-2 bg-burgundy text-white text-sm font-medium rounded-md hover:bg-burgundy/90 transition-all shadow-md hover:shadow-lg flex items-center"
+                  className="ml-1 sm:ml-2 px-3 sm:px-4 lg:px-5 py-2 bg-burgundy text-white text-sm font-medium rounded-full hover:bg-burgundy/90 transition-all shadow-md hover:shadow-lg flex items-center"
                 >
                   Apply <span className="hidden sm:inline ml-1">Now</span>{" "}
                   <FaChevronDown className="ml-1 sm:ml-2 text-xs" />

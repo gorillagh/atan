@@ -87,9 +87,9 @@ const Apprentices = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-lg bg-white/40 backdrop-blur-md shadow-sm border border-white/50"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white/40 backdrop-blur-md shadow-sm border border-white/50"
                 >
-                  <div className="mt-1 bg-burgundy/10 p-2 rounded-md">
+                  <div className="mt-1 bg-burgundy/10 p-2 rounded-lg">
                     {feature.icon}
                   </div>
                   <div>
@@ -104,7 +104,7 @@ const Apprentices = () => {
               <a
                 href={apprenticesContent.ctaLink}
                 target="_blank"
-                className="inline-flex items-center px-8 py-3 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors"
+                className="inline-flex items-center px-8 py-3 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors"
               >
                 {apprenticesContent.ctaText} <FaArrowRight className="ml-2" />
               </a>
@@ -125,11 +125,11 @@ const Apprentices = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:w-1/2"
           >
-            <div className="relative rounded-2xl overflow-hidden bg-white/30 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
+            <div className="relative rounded-3xl overflow-hidden bg-white/30 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
               <div className="absolute inset-0 bg-[url(/for_apprentices.webp)] bg-cover bg-center"></div>
               <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-burgundy/30"></div>
 
-              <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md rounded-lg p-4 shadow-lg border border-white/50">
+              <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md rounded-xl p-4 shadow-lg border border-white/50">
                 <h3 className="font-bold text-gray-900 mb-3">
                   Your Apprenticeship Journey
                 </h3>
@@ -186,7 +186,7 @@ const Apprentices = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-white/90 backdrop-blur-md rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 border border-white/50"
+              className="bg-white/90 backdrop-blur-md rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 border border-white/50"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-6">
@@ -202,7 +202,7 @@ const Apprentices = () => {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-burgundy/5 p-5 rounded-lg border border-burgundy/10">
+                <div className="bg-burgundy/5 p-5 rounded-xl border border-burgundy/10">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
                     Bridge the Experience Gap
                   </h4>
@@ -320,7 +320,7 @@ const Apprentices = () => {
                     ].map((step, i) => (
                       <div
                         key={i}
-                        className="text-center bg-white/50 p-4 rounded-lg border border-gray-100"
+                        className="text-center bg-white/50 p-4 rounded-xl border border-gray-100"
                       >
                         <div className="w-10 h-10 rounded-full bg-burgundy text-white flex items-center justify-center mx-auto mb-2">
                           {step.step}
@@ -334,7 +334,7 @@ const Apprentices = () => {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-burgundy/10 to-blue-50 p-6 rounded-lg mt-6">
+                <div className="bg-gradient-to-r from-burgundy/10 to-blue-50 p-6 rounded-xl mt-6">
                   <h4 className="font-bold text-gray-900 mb-2 text-center">
                     Ready to Start Your Professional Journey?
                   </h4>
@@ -346,7 +346,7 @@ const Apprentices = () => {
                     <a
                       href={apprenticesContent.ctaLink}
                       target="_blank"
-                      className="inline-flex items-center px-6 py-2 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors"
+                      className="inline-flex items-center px-6 py-2 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors"
                     >
                       Apply as a Graduate <FaArrowRight className="ml-2" />
                     </a>

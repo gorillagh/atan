@@ -59,7 +59,7 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl p-6 shadow-lg relative border border-gray-100"
+              className="bg-white rounded-2xl p-6 shadow-lg relative border border-gray-100"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-burgundy/5 rounded-full -mr-8 -mt-8"></div>
 

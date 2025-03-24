@@ -21,7 +21,7 @@ const ROICalculator = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="bg-white rounded-xl p-8 shadow-lg border border-gray-100"
+      className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
     >
       <h3 className="text-2xl font-bold text-gray-900 mb-6">ROI Calculator</h3>
       <p className="text-gray-600 mb-6">
@@ -39,7 +39,7 @@ const ROICalculator = () => {
             max="10"
             value={apprentices}
             onChange={(e) => setApprentices(parseInt(e.target.value))}
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            className="w-full h-2 bg-gray-200 rounded-xl appearance-none cursor-pointer"
           />
           <div className="flex justify-between text-sm text-gray-600 mt-1">
             <span>1</span>
@@ -59,7 +59,7 @@ const ROICalculator = () => {
             step="3"
             value={duration}
             onChange={(e) => setDuration(parseInt(e.target.value))}
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            className="w-full h-2 bg-gray-200 rounded-xl appearance-none cursor-pointer"
           />
           <div className="flex justify-between text-sm text-gray-600 mt-1">
             <span>3</span>
@@ -79,7 +79,7 @@ const ROICalculator = () => {
             step="100"
             value={salary}
             onChange={(e) => setSalary(parseInt(e.target.value))}
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            className="w-full h-2 bg-gray-200 rounded-xl appearance-none cursor-pointer"
           />
           <div className="flex justify-between text-sm text-gray-600 mt-1">
             <span>$1,000</span>
@@ -88,29 +88,29 @@ const ROICalculator = () => {
           </div>
         </div>
 
-        <div className="bg-burgundy/5 p-4 rounded-lg mt-8">
+        <div className="bg-burgundy/5 p-4 rounded-xl mt-8">
           <h4 className="font-bold text-gray-900 mb-4">Your Estimated ROI</h4>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white p-3 rounded-md">
+            <div className="bg-white p-3 rounded-lg">
               <span className="text-sm text-gray-600">Training Cost</span>
               <p className="text-xl font-bold text-gray-900">
                 ${trainingCost.toLocaleString()}
               </p>
             </div>
-            <div className="bg-white p-3 rounded-md">
+            <div className="bg-white p-3 rounded-lg">
               <span className="text-sm text-gray-600">Salary Cost</span>
               <p className="text-xl font-bold text-gray-900">
                 ${totalSalary.toLocaleString()}
               </p>
             </div>
-            <div className="bg-white p-3 rounded-md">
+            <div className="bg-white p-3 rounded-lg">
               <span className="text-sm text-gray-600">Productivity Value</span>
               <p className="text-xl font-bold text-gray-900">
                 ${productivityGain.toLocaleString()}
               </p>
             </div>
-            <div className="bg-white p-3 rounded-md">
+            <div className="bg-white p-3 rounded-lg">
               <span className="text-sm text-gray-600">Net Benefit</span>
               <p className="text-xl font-bold text-gray-900">
                 ${(totalBenefit - totalCost).toLocaleString()}
@@ -118,7 +118,7 @@ const ROICalculator = () => {
             </div>
           </div>
 
-          <div className="mt-4 bg-burgundy text-white p-4 rounded-md text-center">
+          <div className="mt-4 bg-burgundy text-white p-4 rounded-lg text-center">
             <span className="block text-sm">Return on Investment</span>
             <p className="text-3xl font-bold">{roi.toFixed(1)}%</p>
           </div>

@@ -82,13 +82,13 @@ const Hero = () => {
                   setIsOpen(false);
                   toggleModal();
                 }}
-                className="px-8 py-3 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors flex items-center"
+                className="px-8 py-3 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors flex items-center"
               >
                 Apply Now <FaArrowRight className="ml-2" />
               </button>
               <a
                 href="#about"
-                className="px-8 py-3 flex items-center bg-white text-burgundy font-medium rounded-md border border-burgundy hover:bg-burgundy/5 transition-colors"
+                className="px-8 py-3 flex items-center bg-transparent text-burgundy font-medium rounded-full border border-burgundy hover:bg-burgundy/5 transition-colors"
               >
                 Learn More
               </a>
@@ -105,7 +105,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="w-full lg:w-1/2"
           >
-            <div className="relative w-full h-[300px] xs:h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden bg-white/40 backdrop-blur-md shadow-xl border border-white/50">
+            <div className="relative w-full h-[300px] xs:h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-3xl overflow-hidden bg-white/40 backdrop-blur-md shadow-xl border border-white/50">
               <img
                 src="/hero_image.webp"
                 alt="Diverse group of graduates"

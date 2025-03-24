@@ -86,9 +86,9 @@ const Universities = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-lg bg-white/60 backdrop-blur-sm shadow-sm border border-white/70"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white/60 backdrop-blur-sm shadow-sm border border-white/70"
                 >
-                  <div className="mt-1 bg-burgundy/10 p-2 rounded-md">
+                  <div className="mt-1 bg-burgundy/10 p-2 rounded-lg">
                     {feature.icon}
                   </div>
                   <div>
@@ -103,7 +103,7 @@ const Universities = () => {
               <a
                 href={universitiesContent.ctaLink}
                 target="_blank"
-                className="inline-flex items-center px-8 py-3 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors"
+                className="inline-flex items-center px-8 py-3 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors"
               >
                 {universitiesContent.ctaText} <FaArrowRight className="ml-2" />
               </a>
@@ -124,7 +124,7 @@ const Universities = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:w-1/2"
           >
-            <div className="relative rounded-2xl overflow-hidden bg-white/40 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
+            <div className="relative rounded-3xl overflow-hidden bg-white/40 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
               <div className="absolute inset-0 bg-[url(/for_universities.webp)] bg-cover bg-center"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-burgundy/20 to-transparent"></div>
 
@@ -162,7 +162,7 @@ const Universities = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-white/95 backdrop-blur-md rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 border border-white/50"
+              className="bg-white/95 backdrop-blur-md rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 border border-white/50"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-6">
@@ -178,7 +178,7 @@ const Universities = () => {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-gradient-to-r from-burgundy/10 to-blue-50/50 p-5 rounded-lg">
+                <div className="bg-gradient-to-r from-burgundy/10 to-blue-50/50 p-5 rounded-xl">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
                     Partner with ATAN to Strengthen Your Graduate Success
                   </h4>
@@ -225,7 +225,7 @@ const Universities = () => {
                     ].map((benefit, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm"
+                        className="flex items-start gap-3 p-3 bg-white rounded-xl shadow-sm"
                       >
                         <div className="mt-1 text-xl">{benefit.icon}</div>
                         <div>
@@ -277,7 +277,7 @@ const Universities = () => {
                   </ul>
                 </div>
 
-                <div className="bg-white p-5 rounded-lg border border-gray-100 shadow-sm">
+                <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
                     Creating Seamless Educational Pathways
                   </h4>
@@ -287,7 +287,7 @@ const Universities = () => {
                     universities fulfill their mission of preparing students for
                     successful futures.
                   </p>
-                  <div className="p-4 bg-burgundy/5 rounded-lg border border-burgundy/10">
+                  <div className="p-4 bg-burgundy/5 rounded-xl border border-burgundy/10">
                     <h5 className="font-bold text-gray-900 mb-2">
                       Join Our Educational Network
                     </h5>
@@ -299,7 +299,7 @@ const Universities = () => {
                     <a
                       href={universitiesContent.ctaLink}
                       target="_blank"
-                      className="inline-flex items-center px-6 py-2 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors text-sm"
+                      className="inline-flex items-center px-6 py-2 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors text-sm"
                     >
                       Become a University Partner{" "}
                       <FaArrowRight className="ml-2" />
