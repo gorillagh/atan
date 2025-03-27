@@ -131,7 +131,7 @@ const About = () => {
           >
             <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
               <img
-                src="/about_image.webp"
+                src="/about.avif"
                 alt="ATAN's impact in Africa"
                 className="absolute inset-0 w-full h-full object-cover"
               />

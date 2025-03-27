@@ -16,17 +16,16 @@ const Tools = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-gray-900"
           >
-            Useful <span className="text-burgundy">Tools</span>
+            Frequently <span className="text-burgundy">Asked Questions</span>
           </motion.h2>
           <div className="w-20 h-1 bg-burgundy mx-auto mt-4 mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Resources to help employers, universities, and apprentices make
             informed decisions.
-          </p>
+          </p> */}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <ROICalculator />
+        <div className="flex flex-col gap-8">
           <FAQAccordion />
         </div>
       </div>

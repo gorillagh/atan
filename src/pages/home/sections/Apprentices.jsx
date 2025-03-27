@@ -126,7 +126,7 @@ const Apprentices = () => {
             className="lg:w-1/2"
           >
             <div className="relative rounded-3xl overflow-hidden bg-white/30 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
-              <div className="absolute inset-0 bg-[url(/for_apprentices.webp)] bg-cover bg-center"></div>
+              <div className="absolute inset-0 bg-[url(/apprentices.avif)] bg-cover bg-center"></div>
               <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-burgundy/30"></div>
 
               <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md rounded-xl p-4 shadow-lg border border-white/50">

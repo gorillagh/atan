@@ -1,6 +1,7 @@
 import About from "./sections/About";
 import Apprentices from "./sections/Apprentices";
 import Contact from "./sections/Contact";
+import CTA from "./sections/CTA";
 import Employers from "./sections/Employers";
 import Hero from "./sections/Hero";
 import Testimonials from "./sections/Testimonials";
@@ -16,6 +17,7 @@ const Home = () => {
       <Apprentices />
       <Universities />
       <Testimonials />
+      <CTA />
       <Tools />
       <Contact />
     </div>

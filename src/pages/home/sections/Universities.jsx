@@ -1,17 +1,79 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaUniversity,
   FaChartLine,
   FaHandshake,
   FaGraduationCap,
   FaArrowRight,
+  FaArrowLeft,
+  FaChevronRight,
+  FaChevronLeft,
+  FaQuoteLeft,
 } from "react-icons/fa";
 import { BsCheck2Circle, BsX } from "react-icons/bs";
-import { MdSchool, MdBusinessCenter } from "react-icons/md";
+import { MdSchool, MdBusinessCenter, MdAccessibility } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Universities = () => {
   const [showModal, setShowModal] = useState(false);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Track window size for responsive adjustments
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Manage keyboard navigation for modal
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && showModal) {
+        setShowModal(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [showModal]);
+
+  // Testimonial data
+  const testimonials = [
+    {
+      quote:
+        "Our partnership with ATAN has significantly improved graduate employment rates and industry relevance of our curriculum. The structured pathway they provide has been invaluable for our students.",
+      author: "Prof. Ada Johnson",
+      title: "University of Technology, Lagos",
+      initials: "AJ",
+    },
+    {
+      quote:
+        "Since joining ATAN's network, we've seen a 40% increase in technical graduate placements. The feedback loop from industry partners has helped us refine our teaching approach.",
+      author: "Dr. Samuel Okafor",
+      title: "Lagos State University",
+      initials: "SO",
+    },
+    {
+      quote:
+        "The data-driven insights from ATAN have transformed how we prepare students for the workforce. Our engineering department now boasts a 92% employment rate within 6 months of graduation.",
+      author: "Prof. Elizabeth Nwaneri",
+      title: "Federal University of Technology, Akure",
+      initials: "EN",
+    },
+  ];
+
+  // Auto-advance testimonials
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) =>
+        prev === testimonials.length - 1 ? 0 : prev + 1
+      );
+    }, 8000);
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
 
   const universitiesContent = {
     id: "universities",
@@ -21,42 +83,58 @@ const Universities = () => {
       "Enhance graduate outcomes by providing a clear pathway from education to meaningful employment for your technical students.",
     features: [
       {
-        icon: <FaChartLine size={20} />,
+        icon: <FaChartLine size={22} />,
         title: "Improved Employment Outcomes",
         description:
           "Enhance your institution's graduate employment statistics.",
       },
       {
-        icon: <MdBusinessCenter size={20} />,
+        icon: <MdBusinessCenter size={22} />,
         title: "Industry Connections",
         description:
           "Strengthen relationships with local and regional businesses.",
       },
       {
-        icon: <MdSchool size={20} />,
+        icon: <MdSchool size={22} />,
         title: "Curriculum Insights",
         description:
           "Gain valuable feedback on industry needs to inform teaching.",
       },
       {
-        icon: <FaGraduationCap size={20} />,
+        icon: <FaGraduationCap size={22} />,
         title: "Increased Attractiveness",
         description: "Offer prospective students a clear path to employment.",
       },
     ],
     ctaText: "Join as a University Partner",
-    bgColor: "bg-gradient-to-br from-white via-blue-50/30 to-gray-50",
+    bgColor: "bg-gradient-to-br from-white via-blue-50/20 to-gray-50",
     ctaLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSfLAqoxl6C4PRUGSyvGPhcd3vA0N_nZ-M4O1WmTnwy8jaYNsQ/viewform",
   };
 
+  // Impact metrics to showcase success
+  const impactMetrics = [
+    { label: "Partner Universities", value: "35+", icon: <FaUniversity /> },
+    {
+      label: "Graduate Placement Rate",
+      value: "87%",
+      icon: <FaGraduationCap />,
+    },
+    { label: "Curriculum Updates", value: "120+", icon: <MdSchool /> },
+  ];
+
   return (
     <section
       id={universitiesContent.id}
-      className={`py-20 ${universitiesContent.bgColor}`}
+      className={`py-24 ${universitiesContent.bgColor} relative overflow-hidden`}
+      aria-labelledby="universities-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+      {/* Decorative elements */}
+      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-burgundy/5 blur-3xl"></div>
+      <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-burgundy/5 blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -64,21 +142,55 @@ const Universities = () => {
             transition={{ duration: 0.6 }}
             className="lg:w-1/2"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <universitiesContent.icon className="text-burgundy text-2xl" />
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                For{" "}
-                <span className="text-burgundy">
-                  {universitiesContent.title}
-                </span>
-              </h2>
+            <div
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/10 text-burgundy mb-6"
+              role="presentation"
+            >
+              <universitiesContent.icon
+                className="text-burgundy"
+                aria-hidden="true"
+              />
+              <span className="font-medium">For Education Partners</span>
             </div>
 
-            <p className="text-xl text-gray-600 mb-8">
+            <h2
+              id="universities-heading"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+            >
+              Elevating{" "}
+              <span className="text-burgundy relative">
+                {universitiesContent.title}
+                <span className="absolute -bottom-2 left-0 w-full h-1 bg-burgundy/20 rounded-full"></span>
+              </span>
+            </h2>
+
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               {universitiesContent.description}
             </p>
 
-            <div className="space-y-6 mb-8">
+            {/* Impact metrics */}
+            <div className="flex flex-wrap gap-4 mb-8">
+              {impactMetrics.map((metric, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="bg-white/70 backdrop-blur-sm rounded-lg p-3 flex items-center gap-3 border border-white/80 shadow-sm"
+                >
+                  <div className="text-burgundy">{metric.icon}</div>
+                  <div>
+                    <div className="text-2xl font-bold text-burgundy">
+                      {metric.value}
+                    </div>
+                    <div className="text-sm text-gray-600">{metric.label}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
               {universitiesContent.features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -86,33 +198,48 @@ const Universities = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white/60 backdrop-blur-sm shadow-sm border border-white/70"
+                  className="group p-5 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 shadow-sm hover:shadow-md transition-all hover:bg-white/90 focus-within:ring-2 focus-within:ring-burgundy/30"
+                  tabIndex={0}
                 >
-                  <div className="mt-1 bg-burgundy/10 p-2 rounded-lg">
-                    {feature.icon}
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="bg-burgundy/10 p-3 rounded-lg group-hover:bg-burgundy/20 transition-colors group-focus-within:bg-burgundy/20">
+                      {feature.icon}
+                    </div>
+                    <h3 className="font-bold text-lg text-gray-900">
+                      {feature.title}
+                    </h3>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">{feature.title}</h3>
-                    <p className="text-gray-600 mt-1">{feature.description}</p>
-                  </div>
+                  <p className="text-gray-600 pl-14">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-4 items-center">
+            <div className="flex flex-wrap gap-5 items-center">
               <a
                 href={universitiesContent.ctaLink}
                 target="_blank"
-                className="inline-flex items-center px-8 py-3 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors"
+                rel="noopener noreferrer"
+                className="flex items-center px-8 py-3.5 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-all hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:ring-offset-2"
+                aria-label="Join as a University Partner - Opens in a new tab"
               >
-                {universitiesContent.ctaText} <FaArrowRight className="ml-2" />
+                {universitiesContent.ctaText}{" "}
+                <FaArrowRight className="ml-2" aria-hidden="true" />
               </a>
 
               <button
                 onClick={() => setShowModal(true)}
-                className="inline-flex items-center text-burgundy font-medium hover:text-burgundy/80 transition-colors underline"
+                className="relative group flex items-center text-burgundy font-medium transition-colors focus:outline-none focus:underline"
+                aria-haspopup="dialog"
+                aria-expanded={showModal}
               >
                 Learn more about partnerships
+                <span
+                  className="ml-1 group-hover:ml-2 transition-all duration-300"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-burgundy/50 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
               </button>
             </div>
           </motion.div>
@@ -122,25 +249,107 @@ const Universities = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:w-1/2"
+            className="lg:w-1/2 w-full"
           >
-            <div className="relative rounded-3xl overflow-hidden bg-white/40 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
-              <div className="absolute inset-0 bg-[url(/for_universities.webp)] bg-cover bg-center"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-burgundy/20 to-transparent"></div>
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl transform hover:scale-[1.01] transition-transform duration-500">
+              <div className="absolute inset-0 bg-[url(/universities.avif)] bg-cover bg-center transform hover:scale-105 transition-transform duration-7000"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-burgundy/20 via-transparent to-burgundy/10"></div>
 
-              <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md rounded-lg p-5 shadow-lg border border-white/50">
-                <h3 className="font-bold text-gray-900 mb-2">
-                  Partner Success Story
-                </h3>
-                <p className="text-gray-600 italic">
-                  "Our partnership with ATAN has significantly improved graduate
-                  employment rates and industry relevance of our curriculum. The
-                  structured pathway they provide has been invaluable for our
-                  students."
-                </p>
-                <p className="font-medium text-burgundy mt-2">
-                  — Prof. Ada Johnson, University of Technology, Lagos
-                </p>
+              <div className="absolute bottom-6 left-6 right-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-xl border border-white/70"
+                >
+                  <div className="flex items-center mb-4 justify-between">
+                    <div className="flex items-center">
+                      <div className="w-1.5 h-8 bg-burgundy rounded-full mr-3"></div>
+                      <h3 className="font-bold text-gray-900 text-lg">
+                        Partner Success Stories
+                      </h3>
+                    </div>
+
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() =>
+                          setCurrentTestimonial((prev) =>
+                            prev === 0 ? testimonials.length - 1 : prev - 1
+                          )
+                        }
+                        className="w-8 h-8 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy hover:bg-burgundy/20 transition-colors"
+                        aria-label="Previous testimonial"
+                      >
+                        <FaChevronLeft size={14} />
+                      </button>
+                      <button
+                        onClick={() =>
+                          setCurrentTestimonial((prev) =>
+                            prev === testimonials.length - 1 ? 0 : prev + 1
+                          )
+                        }
+                        className="w-8 h-8 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy hover:bg-burgundy/20 transition-colors"
+                        aria-label="Next testimonial"
+                      >
+                        <FaChevronRight size={14} />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="relative overflow-hidden">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={currentTestimonial}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        transition={{ duration: 0.3 }}
+                        className="relative"
+                      >
+                        <FaQuoteLeft
+                          className="text-burgundy/20 text-4xl absolute top-0 left-0"
+                          aria-hidden="true"
+                        />
+                        <p className="text-gray-600 italic pl-8 pt-2">
+                          "{testimonials[currentTestimonial].quote}"
+                        </p>
+                        <div className="mt-3 flex items-center">
+                          <div className="w-8 h-8 rounded-full bg-burgundy/20 flex items-center justify-center text-burgundy font-bold mr-2">
+                            {testimonials[currentTestimonial].initials}
+                          </div>
+                          <div>
+                            <p className="font-medium text-burgundy">
+                              {testimonials[currentTestimonial].author}
+                            </p>
+                            <p className="text-sm text-gray-600">
+                              {testimonials[currentTestimonial].title}
+                            </p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    </AnimatePresence>
+
+                    {/* Testimonial pagination indicators */}
+                    <div
+                      className="flex justify-center gap-2 mt-4"
+                      aria-hidden="true"
+                    >
+                      {testimonials.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentTestimonial(index)}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            index === currentTestimonial
+                              ? "bg-burgundy w-6"
+                              : "bg-burgundy/30"
+                          }`}
+                          aria-label={`Go to testimonial ${index + 1}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>
@@ -154,35 +363,45 @@ const Universities = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
             onClick={() => setShowModal(false)}
+            role="dialog"
+            aria-labelledby="modal-title"
+            aria-modal="true"
           >
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-white/95 backdrop-blur-md rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 border border-white/50"
+              className="bg-white/95 backdrop-blur-md rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 border border-white/50 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900">
-                  University Partnership Program
-                </h3>
+              <div className="flex justify-between items-center mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-10 bg-burgundy rounded-full"></div>
+                  <h3
+                    id="modal-title"
+                    className="text-2xl font-bold text-gray-900"
+                  >
+                    University Partnership Program
+                  </h3>
+                </div>
                 <button
                   onClick={() => setShowModal(false)}
-                  className="text-gray-500 hover:text-burgundy transition-colors"
+                  className="w-8 h-8 rounded-full bg-gray-100 hover:bg-burgundy/10 flex items-center justify-center text-gray-500 hover:text-burgundy transition-colors"
+                  aria-label="Close dialog"
                 >
-                  <BsX size={24} />
+                  <BsX size={24} aria-hidden="true" />
                 </button>
               </div>
 
-              <div className="space-y-6">
-                <div className="bg-gradient-to-r from-burgundy/10 to-blue-50/50 p-5 rounded-xl">
+              <div className="space-y-8">
+                <div className="bg-gradient-to-r from-burgundy/10 to-blue-50/50 p-6 rounded-xl">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
                     Partner with ATAN to Strengthen Your Graduate Success
                   </h4>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 leading-relaxed">
                     Universities strive to prepare students for successful
                     careers, but the transition from education to employment
                     remains challenging. By partnering with ATAN, you can
@@ -192,7 +411,8 @@ const Universities = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                    <span className="w-1.5 h-6 bg-burgundy/70 rounded-full mr-3"></span>
                     Benefits of University Partnership
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -222,12 +442,23 @@ const Universities = () => {
                         title: "Alumni Success",
                         desc: "Build a network of successful graduates in technical fields",
                       },
+                      {
+                        icon: <MdAccessibility className="text-burgundy" />,
+                        title: "Inclusive Opportunities",
+                        desc: "Support diverse graduates in accessing quality employment",
+                      },
                     ].map((benefit, i) => (
-                      <div
+                      <motion.div
                         key={i}
-                        className="flex items-start gap-3 p-3 bg-white rounded-xl shadow-sm"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: i * 0.05 }}
+                        className="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 focus-within:ring-2 focus-within:ring-burgundy/30"
+                        tabIndex={0}
                       >
-                        <div className="mt-1 text-xl">{benefit.icon}</div>
+                        <div className="mt-1 text-xl bg-burgundy/10 p-2 rounded-lg">
+                          {benefit.icon}
+                        </div>
                         <div>
                           <h5 className="font-bold text-gray-900">
                             {benefit.title}
@@ -236,62 +467,57 @@ const Universities = () => {
                             {benefit.desc}
                           </p>
                         </div>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                    <span className="w-1.5 h-6 bg-burgundy/70 rounded-full mr-3"></span>
                     How the Partnership Works
                   </h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">
-                        We connect your technical graduates with SMEs seeking
-                        their specific skills
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">
-                        Graduates participate in structured, 12-month
-                        apprenticeships
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">
-                        Universities can stay connected with graduates
-                        throughout their apprenticeship journey
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">
-                        Potential opportunities for academic credit arrangements
-                        (contact us to discuss options)
-                      </span>
-                    </li>
+                  <ul className="space-y-3 pl-2">
+                    {[
+                      "We connect your technical graduates with SMEs seeking their specific skills",
+                      "Graduates participate in structured, 12-month apprenticeships",
+                      "Universities can stay connected with graduates throughout their apprenticeship journey",
+                      "Potential opportunities for academic credit arrangements (contact us to discuss options)",
+                      "Regular data reports on graduate performance and employment outcomes",
+                      "Annual partnership review with recommendations for curriculum alignment",
+                    ].map((item, i) => (
+                      <motion.li
+                        key={i}
+                        className="flex items-start bg-white/70 p-3 rounded-lg hover:bg-white/90 transition-colors"
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: i * 0.05 }}
+                      >
+                        <BsCheck2Circle
+                          className="text-burgundy text-xl mt-0.5 mr-3 flex-shrink-0"
+                          aria-hidden="true"
+                        />
+                        <span className="text-gray-700">{item}</span>
+                      </motion.li>
+                    ))}
                   </ul>
                 </div>
 
-                <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
+                <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
                     Creating Seamless Educational Pathways
                   </h4>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-5 leading-relaxed">
                     ATAN believes that education doesn't end at graduation. By
                     creating structured transitions into the workforce, we help
                     universities fulfill their mission of preparing students for
                     successful futures.
                   </p>
-                  <div className="p-4 bg-burgundy/5 rounded-xl border border-burgundy/10">
+                  <div className="p-5 bg-burgundy/5 rounded-xl border border-burgundy/10">
                     <h5 className="font-bold text-gray-900 mb-2">
                       Join Our Educational Network
                     </h5>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-gray-700 mb-5">
                       Partner with ATAN to create stronger connections between
                       your educational offerings and the needs of employers in
                       your region.
@@ -299,10 +525,12 @@ const Universities = () => {
                     <a
                       href={universitiesContent.ctaLink}
                       target="_blank"
-                      className="inline-flex items-center px-6 py-2 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors text-sm"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-6 py-2.5 bg-burgundy text-white font-medium rounded-lg hover:bg-burgundy/90 transition-all hover:shadow-md focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:ring-offset-2"
+                      aria-label="Become a University Partner - Opens in a new tab"
                     >
                       Become a University Partner{" "}
-                      <FaArrowRight className="ml-2" />
+                      <FaArrowRight className="ml-2" aria-hidden="true" />
                     </a>
                   </div>
                 </div>

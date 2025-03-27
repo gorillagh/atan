@@ -107,7 +107,7 @@ const Hero = () => {
           >
             <div className="relative w-full h-[300px] xs:h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-3xl overflow-hidden bg-white/40 backdrop-blur-md shadow-xl border border-white/50">
               <img
-                src="/hero_image.webp"
+                src="/hero_image.avif"
                 alt="Diverse group of graduates"
                 className="absolute inset-0 w-full h-full object-cover object-center"
               />
