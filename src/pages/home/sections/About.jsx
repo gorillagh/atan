@@ -44,13 +44,13 @@ const About = () => {
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-10"
+            className="space-y-8"
           >
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 inline-block border-b-3 border-burgundy pb-1">
@@ -75,51 +75,6 @@ const About = () => {
                 their knowledge in meaningful ways from day one.
               </p>
             </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform transition-all hover:shadow-xl">
-              <h4 className="font-bold text-xl text-gray-900 border-l-4 border-burgundy pl-4 mb-5">
-                How ATAN Works
-              </h4>
-              <p className="text-gray-700 mb-6">
-                Our platform creates meaningful connections between technical
-                graduates and SMEs looking to grow. Through structured 12-month
-                full-time apprenticeships, graduates gain hands-on experience
-                while SMEs benefit from fresh perspectives and technical
-                expertise.
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Match SMEs with talented recent graduates eager to make a
-                    difference
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Cost-sharing support for businesses and living stipends for
-                    apprentices
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    80%+ job placement rates for apprentices after program
-                    completion
-                  </span>
-                </li>
-              </ul>
-              <div className="mt-6 text-center">
-                <button
-                  onClick={() => setShowModal(true)}
-                  className="text-burgundy inline-flex items-center text-sm font-medium hover:text-burgundy/80 transition-colors underline"
-                >
-                  <AiOutlineInfoCircle className="mr-1" size={18} />
-                  Learn more about how ATAN works
-                </button>
-              </div>
-            </div>
           </motion.div>
 
           <motion.div
@@ -129,63 +84,76 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/about.avif"
                 alt="ATAN's impact in Africa"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-burgundy/40"></div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-10 bg-white rounded-2xl p-8 shadow-xl border border-gray-100 relative transform -translate-y-6 mx-4"
-            >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                Our Impact
-              </h3>
-
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-5 bg-burgundy/5 rounded-xl border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
-                  <div className="text-4xl font-extrabold text-burgundy">
-                    500+
-                  </div>
-                  <div className="text-gray-700 font-medium mt-2">
-                    Graduates Connected
-                  </div>
-                </div>
-                <div className="text-center p-5 bg-burgundy/5 rounded-xl border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
-                  <div className="text-4xl font-extrabold text-burgundy">
-                    80%
-                  </div>
-                  <div className="text-gray-700 font-medium mt-2">
-                    Job Placement Rate
-                  </div>
-                </div>
-                <div className="text-center p-5 bg-burgundy/5 rounded-xl border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
-                  <div className="text-4xl font-extrabold text-burgundy">
-                    50+
-                  </div>
-                  <div className="text-gray-700 font-medium mt-2">
-                    SME Partners
-                  </div>
-                </div>
-                <div className="text-center p-5 bg-burgundy/5 rounded-xl border border-burgundy/10 transform transition-all hover:scale-105 duration-300">
-                  <div className="text-4xl font-extrabold text-burgundy">
-                    12
-                  </div>
-                  <div className="text-gray-700 font-medium mt-2">
-                    African Countries
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-16 bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform transition-all hover:shadow-xl max-w-3xl mx-auto"
+        >
+          <h4 className="font-bold text-xl text-gray-900 border-l-4 border-burgundy pl-4 mb-5">
+            How ATAN Works
+          </h4>
+          <p className="text-gray-700 mb-6">
+            Our platform creates meaningful connections between technical
+            graduates and SMEs looking to grow. Through structured 12-month
+            full-time apprenticeships, graduates gain hands-on experience while
+            SMEs benefit from fresh perspectives and technical expertise.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
+                <span className="text-gray-700">
+                  Match SMEs with talented recent graduates eager to make a
+                  difference
+                </span>
+              </li>
+              <li className="flex items-start">
+                <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
+                <span className="text-gray-700">
+                  Cost-sharing support for businesses and living stipends for
+                  apprentices
+                </span>
+              </li>
+            </ul>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
+                <span className="text-gray-700">
+                  80%+ job placement rates for apprentices after program
+                  completion
+                </span>
+              </li>
+              <li className="flex items-start">
+                <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
+                <span className="text-gray-700">
+                  Active in 12 African countries with 50+ SME partners
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div className="mt-6 text-center">
+            <button
+              onClick={() => setShowModal(true)}
+              className="text-burgundy inline-flex items-center text-sm font-medium hover:text-burgundy/80 transition-colors underline"
+            >
+              <AiOutlineInfoCircle className="mr-1" size={18} />
+              Learn more about how ATAN works
+            </button>
+          </div>
+        </motion.div>
       </div>
 
       {/* Detailed Information Modal */}

@@ -5,7 +5,6 @@ import {
   FaHandshake,
   FaGraduationCap,
   FaArrowRight,
-  FaArrowLeft,
   FaChevronRight,
   FaChevronLeft,
   FaQuoteLeft,
@@ -112,85 +111,63 @@ const Universities = () => {
       "https://docs.google.com/forms/d/e/1FAIpQLSfLAqoxl6C4PRUGSyvGPhcd3vA0N_nZ-M4O1WmTnwy8jaYNsQ/viewform",
   };
 
-  // Impact metrics to showcase success
-  const impactMetrics = [
-    { label: "Partner Universities", value: "35+", icon: <FaUniversity /> },
-    {
-      label: "Graduate Placement Rate",
-      value: "87%",
-      icon: <FaGraduationCap />,
-    },
-    { label: "Curriculum Updates", value: "120+", icon: <MdSchool /> },
-  ];
-
   return (
     <section
       id={universitiesContent.id}
       className={`py-24 ${universitiesContent.bgColor} relative overflow-hidden`}
       aria-labelledby="universities-heading"
     >
-      {/* Decorative elements */}
-      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-burgundy/5 blur-3xl"></div>
-      <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-burgundy/5 blur-3xl"></div>
+      {/* Enhanced decorative elements */}
+      <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-burgundy/5 blur-3xl"></div>
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-burgundy/5 blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 w-64 h-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-100/30 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        {/* Header section with subtle accent */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 max-w-3xl mx-auto"
+        >
+          <div
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/10 text-burgundy mb-6"
+            role="presentation"
+          >
+            <universitiesContent.icon
+              className="text-burgundy"
+              aria-hidden="true"
+            />
+            <span className="font-medium">For Education Partners</span>
+          </div>
+
+          <h2
+            id="universities-heading"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+          >
+            Elevating{" "}
+            <span className="text-burgundy relative">
+              {universitiesContent.title}
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-burgundy/20 rounded-full"></span>
+            </span>
+          </h2>
+
+          <p className="text-xl text-gray-600 leading-relaxed">
+            {universitiesContent.description}
+          </p>
+        </motion.div>
+
+        <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-16">
+          {/* Left column with features */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:w-1/2"
+            className="lg:w-1/2 flex flex-col"
           >
-            <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/10 text-burgundy mb-6"
-              role="presentation"
-            >
-              <universitiesContent.icon
-                className="text-burgundy"
-                aria-hidden="true"
-              />
-              <span className="font-medium">For Education Partners</span>
-            </div>
-
-            <h2
-              id="universities-heading"
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
-            >
-              Elevating{" "}
-              <span className="text-burgundy relative">
-                {universitiesContent.title}
-                <span className="absolute -bottom-2 left-0 w-full h-1 bg-burgundy/20 rounded-full"></span>
-              </span>
-            </h2>
-
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              {universitiesContent.description}
-            </p>
-
-            {/* Impact metrics */}
-            <div className="flex flex-wrap gap-4 mb-8">
-              {impactMetrics.map((metric, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white/70 backdrop-blur-sm rounded-lg p-3 flex items-center gap-3 border border-white/80 shadow-sm"
-                >
-                  <div className="text-burgundy">{metric.icon}</div>
-                  <div>
-                    <div className="text-2xl font-bold text-burgundy">
-                      {metric.value}
-                    </div>
-                    <div className="text-sm text-gray-600">{metric.label}</div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8 flex-grow">
               {universitiesContent.features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -198,7 +175,7 @@ const Universities = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="group p-5 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 shadow-sm hover:shadow-md transition-all hover:bg-white/90 focus-within:ring-2 focus-within:ring-burgundy/30"
+                  className="group p-5 rounded-xl bg-white/80 backdrop-blur-sm border border-white/70 shadow-sm hover:shadow-md transition-all hover:bg-white/90 focus-within:ring-2 focus-within:ring-burgundy/30"
                   tabIndex={0}
                 >
                   <div className="flex items-center gap-4 mb-3">
@@ -213,6 +190,27 @@ const Universities = () => {
                 </motion.div>
               ))}
             </div>
+
+            {/* Added accent card for visual appeal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-gradient-to-br from-burgundy/10 to-white/80 p-6 rounded-xl border border-white/70 shadow-md mb-8"
+            >
+              <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="w-1 h-6 bg-burgundy rounded-full mr-3"></span>
+                Creating Seamless Educational Pathways
+              </h4>
+              <p className="text-gray-700 leading-relaxed">
+                ATAN believes that education doesn't end at graduation. By
+                creating structured transitions into the workforce, we help
+                universities fulfill their mission of preparing students for
+                successful futures while connecting them with SMEs that can
+                benefit from their technical expertise.
+              </p>
+            </motion.div>
 
             <div className="flex flex-wrap gap-5 items-center">
               <a
@@ -244,9 +242,10 @@ const Universities = () => {
             </div>
           </motion.div>
 
+          {/* Right column with image and testimonial */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:w-1/2 w-full"
