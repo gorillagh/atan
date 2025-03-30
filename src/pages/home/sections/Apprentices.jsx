@@ -56,6 +56,19 @@ const Apprentices = () => {
       id={apprenticesContent.id}
       className={`py-20 ${apprenticesContent.bgColor}`}
     >
+      <div className="flex flex-col md:hidden">
+        <div className="flex items-center gap-3 mb-4">
+          <apprenticesContent.icon className="text-burgundy text-2xl" />
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            For{" "}
+            <span className="text-burgundy">{apprenticesContent.title}</span>
+          </h2>
+        </div>
+
+        <p className="text-xl text-gray-600 mb-8">
+          {apprenticesContent.description}
+        </p>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
           <motion.div
@@ -65,20 +78,6 @@ const Apprentices = () => {
             transition={{ duration: 0.6 }}
             className="lg:w-1/2"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <apprenticesContent.icon className="text-burgundy text-2xl" />
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                For{" "}
-                <span className="text-burgundy">
-                  {apprenticesContent.title}
-                </span>
-              </h2>
-            </div>
-
-            <p className="text-xl text-gray-600 mb-8">
-              {apprenticesContent.description}
-            </p>
-
             <div className="space-y-6 mb-8">
               {apprenticesContent.features.map((feature, index) => (
                 <motion.div
@@ -125,6 +124,21 @@ const Apprentices = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:w-1/2"
           >
+            <div className="hidden md:flex flex-col">
+              <div className="flex items-center gap-3 mb-4">
+                <apprenticesContent.icon className="text-burgundy text-2xl" />
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  For{" "}
+                  <span className="text-burgundy">
+                    {apprenticesContent.title}
+                  </span>
+                </h2>
+              </div>
+
+              <p className="text-xl text-gray-600 mb-8">
+                {apprenticesContent.description}
+              </p>
+            </div>
             <div className="relative rounded-3xl overflow-hidden bg-white/30 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
               <div className="absolute inset-0 bg-[url(/apprentices.avif)] bg-cover bg-center"></div>
               <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-burgundy/30"></div>
