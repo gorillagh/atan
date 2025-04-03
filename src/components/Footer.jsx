@@ -3,22 +3,24 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-purple text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">ATAN</h3>
-            <p className="text-gray-400 mb-2">
+            <div className="flex items-center mb-6">
+              <img src="/atan-logo.png" alt="ATAN" className="h-10" />
+            </div>
+            <p className="text-blue-100 mb-2">
               Connecting Africa's talent with opportunity through
               apprenticeships.
             </p>
-            <p className="text-gray-400 mb-6 font-medium">
+            <p className="text-blue-100 mb-6 font-medium">
               Empowering Africa's Future Workforce
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-blue-200 hover:text-white transition-colors"
               >
                 <svg
                   className="w-6 h-6"
@@ -30,7 +32,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-blue-200 hover:text-white transition-colors"
               >
                 <svg
                   className="w-6 h-6"
@@ -42,7 +44,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-blue-200 hover:text-white transition-colors"
               >
                 <svg
                   className="w-6 h-6"
@@ -54,7 +56,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-blue-200 hover:text-white transition-colors"
               >
                 <svg
                   className="w-6 h-6"
@@ -75,7 +77,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-blue-200 hover:text-white transition-colors"
                 >
                   Home
                 </a>
@@ -83,7 +85,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#about"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-blue-200 hover:text-white transition-colors"
                 >
                   About ATAN
                 </a>
@@ -91,7 +93,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#employers"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-blue-200 hover:text-white transition-colors"
                 >
                   For Employers
                 </a>
@@ -99,7 +101,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#universities"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-blue-200 hover:text-white transition-colors"
                 >
                   For Universities
                 </a>
@@ -107,7 +109,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#apprentices"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-blue-200 hover:text-white transition-colors"
                 >
                   For Apprentices
                 </a>
@@ -115,7 +117,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#contact"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-blue-200 hover:text-white transition-colors"
                 >
                   Contact Us
                 </a>
@@ -129,7 +131,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#tools"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-blue-200 hover:text-white transition-colors"
                 >
                   RIO Calculator
                 </a>
@@ -137,7 +139,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-blue-200 hover:text-white transition-colors"
                 >
                   FAQ
                 </a>
@@ -145,7 +147,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#tools"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-blue-200 hover:text-white transition-colors"
                 >
                   Success Stories
                 </a>
@@ -154,7 +156,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#about"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-blue-200 hover:text-white transition-colors"
                 >
                   Blog
                 </a>
@@ -164,7 +166,7 @@ const Footer = () => {
 
           <div>
             <h4 className="text-lg font-semibold text-white mb-6">Contact</h4>
-            <ul className="space-y-3 text-gray-400">
+            <ul className="space-y-3 text-blue-100">
               <li>info@atanafrica.com</li>
               <li>+233 123 456 7890</li>
               <li>
@@ -178,28 +180,28 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-blue-900/30 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Africa Technical Apprentice Network
-              (ATAN). All rights reserved.
+            <p className="text-blue-200 text-sm">
+              © {new Date().getFullYear()} Africa Technical Apprenticeship
+              Network (ATAN). All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
                 href="#"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                className="text-blue-200 hover:text-white text-sm transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                className="text-blue-200 hover:text-white text-sm transition-colors"
               >
                 Terms of Service
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
+                className="text-blue-200 hover:text-white text-sm transition-colors"
               >
                 Cookie Policy
               </a>

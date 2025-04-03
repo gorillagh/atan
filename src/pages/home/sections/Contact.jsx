@@ -7,8 +7,8 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-[10%] right-[10%] w-64 h-64 bg-burgundy/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-[20%] left-[5%] w-80 h-80 bg-blue-100 rounded-full blur-3xl"></div>
+        <div className="absolute top-[10%] right-[10%] w-64 h-64 bg-orange/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-[20%] left-[5%] w-80 h-80 bg-blue/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -20,9 +20,9 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-gray-900"
           >
-            Get in <span className="text-burgundy">Touch</span>
+            Get in <span className="text-purple">Touch</span>
           </motion.h2>
-          <div className="w-20 h-1 bg-burgundy mx-auto mt-4 mb-6"></div>
+          <div className="w-20 h-1 bg-orange mx-auto mt-4 mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Have questions about ATAN? We're here to help you connect with the
             right resources.
@@ -44,12 +44,12 @@ const Contact = () => {
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-gray-900 mb-2">Email</h4>
-                <p className="text-burgundy">info@atanafrica.com</p>
+                <p className="text-purple">info@atanafrica.com</p>
               </div>
 
               <div>
                 <h4 className="font-bold text-gray-900 mb-2">Phone</h4>
-                <p className="text-burgundy">+233 123 456 7890</p>
+                <p className="text-purple">+233 123 456 7890</p>
               </div>
 
               <div>
@@ -68,7 +68,7 @@ const Contact = () => {
                 <div className="flex space-x-4">
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy hover:bg-burgundy hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center text-orange hover:bg-orange hover:text-white transition-colors"
                   >
                     <svg
                       className="w-5 h-5"
@@ -80,7 +80,7 @@ const Contact = () => {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy hover:bg-burgundy hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full bg-blue/10 flex items-center justify-center text-blue hover:bg-blue hover:text-white transition-colors"
                   >
                     <svg
                       className="w-5 h-5"
@@ -92,7 +92,7 @@ const Contact = () => {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy hover:bg-burgundy hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full bg-purple/10 flex items-center justify-center text-purple hover:bg-purple hover:text-white transition-colors"
                   >
                     <svg
                       className="w-5 h-5"
@@ -104,7 +104,7 @@ const Contact = () => {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy hover:bg-burgundy hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center text-orange hover:bg-orange hover:text-white transition-colors"
                   >
                     <svg
                       className="w-5 h-5"
@@ -142,7 +142,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-purple/50"
                     placeholder="Your full name"
                   />
                 </div>
@@ -156,7 +156,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-purple/50"
                     placeholder="Your email address"
                   />
                 </div>
@@ -171,7 +171,7 @@ const Contact = () => {
                 </label>
                 <select
                   id="subject"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-purple/50"
                 >
                   <option value="" disabled selected>
                     Select a subject
@@ -193,7 +193,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy/50"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-purple/50"
                   placeholder="Your message..."
                 ></textarea>
               </div>
@@ -201,7 +201,7 @@ const Contact = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors flex items-center justify-center"
+                  className="w-full px-6 py-3 bg-orange text-white font-medium rounded-full hover:bg-orange/90 transition-colors flex items-center justify-center"
                 >
                   Send Message
                 </button>

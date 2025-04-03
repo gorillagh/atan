@@ -117,13 +117,8 @@ const Navbar = () => {
               transition={{ duration: 0.6 }}
               className="flex-shrink-0"
             >
-              <a href="#" className="flex flex-col items-start">
-                <span className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-burgundy to-burgundy/80 bg-clip-text text-transparent">
-                  ATAN
-                </span>
-                <span className="text-sm italic sm:text-xs  tracking-tight bg-gradient-to-r from-burgundy to-burgundy/80 bg-clip-text text-transparent">
-                  Africa Technical Apprentice Network
-                </span>
+              <a href="#" className="flex items-center">
+                <img src="/atan-logo.png" alt="ATAN" className="h-14" />
               </a>
             </motion.div>
 
@@ -137,15 +132,15 @@ const Navbar = () => {
                     onClick={() => handleLinkClick(link.id)}
                     className={`relative px-2 sm:px-3 lg:px-4 py-2 text-sm rounded-md font-medium transition-colors ${
                       activeLink === link.id
-                        ? "text-burgundy"
-                        : "text-gray-700 hover:text-burgundy"
+                        ? "text-purple"
+                        : "text-gray-700 hover:text-purple"
                     }`}
                   >
                     {link.text}
                     {activeLink === link.id && (
                       <motion.div
                         layoutId="activeIndicator"
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-burgundy"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.3 }}
@@ -157,7 +152,7 @@ const Navbar = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={toggleModal}
-                  className="ml-1 sm:ml-2 px-3 sm:px-4 lg:px-5 py-2 bg-burgundy text-white text-sm font-medium rounded-full hover:bg-burgundy/90 transition-all shadow-md hover:shadow-lg flex items-center"
+                  className="ml-1 sm:ml-2 px-3 sm:px-4 lg:px-5 py-2 bg-orange text-white text-sm font-medium rounded-full hover:bg-orange/90 transition-all shadow-md hover:shadow-lg flex items-center"
                 >
                   Apply <span className="hidden sm:inline ml-1">Now</span>{" "}
                   <FaChevronDown className="ml-1 sm:ml-2 text-xs" />
@@ -170,7 +165,7 @@ const Navbar = () => {
               <motion.button
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-md text-gray-700 hover:text-burgundy focus:outline-none"
+                className="p-2 rounded-md text-gray-700 hover:text-purple focus:outline-none"
                 aria-label="Toggle menu"
               >
                 <HiOutlineMenuAlt3 size={28} />
@@ -204,8 +199,8 @@ const Navbar = () => {
               className="fixed top-0 right-0 bottom-0 w-[85%] max-w-xs bg-white shadow-xl z-50 md:hidden flex flex-col"
             >
               <div className="flex justify-between items-center p-5 border-b border-gray-100">
-                <div className="text-xl font-bold bg-gradient-to-r from-burgundy to-burgundy/80 bg-clip-text text-transparent">
-                  ATAN
+                <div className="flex items-center">
+                  <img src="/atan-logo.png" alt="ATAN" className="h-8" />
                 </div>
                 <motion.button
                   whileTap={{ scale: 0.9 }}
@@ -225,7 +220,7 @@ const Navbar = () => {
                       onClick={() => handleLinkClick(link.id)}
                       className={`flex items-center justify-between p-3 rounded-lg transition-colors ${
                         activeLink === link.id
-                          ? "bg-burgundy/10 text-burgundy font-medium"
+                          ? "bg-purple/10 text-purple font-medium"
                           : "text-gray-700 hover:bg-gray-50"
                       }`}
                     >
@@ -234,7 +229,7 @@ const Navbar = () => {
                         <motion.div
                           initial={{ opacity: 0, x: -5 }}
                           animate={{ opacity: 1, x: 0 }}
-                          className="w-1.5 h-1.5 rounded-full bg-burgundy"
+                          className="w-1.5 h-1.5 rounded-full bg-orange"
                         />
                       )}
                     </a>
@@ -248,9 +243,9 @@ const Navbar = () => {
                     setIsOpen(false);
                     toggleModal();
                   }}
-                  className="w-full py-3 bg-burgundy text-white font-medium rounded-md hover:bg-burgundy/90 transition-colors flex items-center justify-center shadow-md"
+                  className="w-full py-3 bg-orange text-white font-medium rounded-full hover:bg-orange/90 transition-all flex items-center justify-center"
                 >
-                  Apply Now <FaChevronDown className="ml-1 text-xs" />
+                  Apply Now <FaArrowRight className="ml-2" />
                 </button>
               </div>
             </motion.div>
@@ -258,7 +253,6 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      {/* Apply Now Modal */}
       <ApplicationModal isModalOpen={isModalOpen} toggleModal={toggleModal} />
     </>
   );

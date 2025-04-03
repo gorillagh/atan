@@ -5,7 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        burgundy: "#800020", // Primary burgundy color from the requirements
+        burgundy: "#800020", // Removing old burgundy color
+        // ATAN brand colors
+        orange: "#eb6a23",
+        purple: "#482b7b",
+        blue: "#4194d3",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"], // Modern, clean font as requested

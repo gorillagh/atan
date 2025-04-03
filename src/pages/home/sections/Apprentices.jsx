@@ -58,10 +58,9 @@ const Apprentices = () => {
     >
       <div className="flex flex-col md:hidden">
         <div className="flex items-center gap-3 mb-4">
-          <apprenticesContent.icon className="text-burgundy text-2xl" />
+          <apprenticesContent.icon className="text-blue text-2xl" />
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            For{" "}
-            <span className="text-burgundy">{apprenticesContent.title}</span>
+            For <span className="text-blue">{apprenticesContent.title}</span>
           </h2>
         </div>
 
@@ -88,7 +87,7 @@ const Apprentices = () => {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="flex items-start gap-4 p-4 rounded-xl bg-white/40 backdrop-blur-md shadow-sm border border-white/50"
                 >
-                  <div className="mt-1 bg-burgundy/10 p-2 rounded-lg">
+                  <div className="mt-1 bg-blue/10 p-2 rounded-lg">
                     {feature.icon}
                   </div>
                   <div>
@@ -103,14 +102,14 @@ const Apprentices = () => {
               <a
                 href={apprenticesContent.ctaLink}
                 target="_blank"
-                className="inline-flex items-center px-8 py-3 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors"
+                className="inline-flex items-center px-8 py-3 bg-blue text-white font-medium rounded-full hover:bg-blue/90 transition-colors"
               >
                 {apprenticesContent.ctaText} <FaArrowRight className="ml-2" />
               </a>
 
               <button
                 onClick={() => setShowModal(true)}
-                className="inline-flex items-center text-burgundy font-medium hover:text-burgundy/80 transition-colors underline"
+                className="inline-flex items-center text-blue font-medium hover:text-blue/80 transition-colors underline"
               >
                 Learn more about apprenticeships
               </button>
@@ -126,12 +125,10 @@ const Apprentices = () => {
           >
             <div className="hidden md:flex flex-col">
               <div className="flex items-center gap-3 mb-4">
-                <apprenticesContent.icon className="text-burgundy text-2xl" />
+                <apprenticesContent.icon className="text-blue text-2xl" />
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                   For{" "}
-                  <span className="text-burgundy">
-                    {apprenticesContent.title}
-                  </span>
+                  <span className="text-blue">{apprenticesContent.title}</span>
                 </h2>
               </div>
 
@@ -141,7 +138,7 @@ const Apprentices = () => {
             </div>
             <div className="relative rounded-3xl overflow-hidden bg-white/30 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
               <div className="absolute inset-0 bg-[url(/apprentices.avif)] bg-cover bg-center"></div>
-              <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-burgundy/30"></div>
+              <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-purple/30"></div>
 
               <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md rounded-xl p-4 shadow-lg border border-white/50">
                 <h3 className="font-bold text-gray-900 mb-3">
@@ -149,31 +146,31 @@ const Apprentices = () => {
                 </h3>
                 <div className="flex justify-between text-sm">
                   <div className="text-center">
-                    <div className="w-8 h-8 rounded-full bg-burgundy text-white flex items-center justify-center mx-auto">
+                    <div className="w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center mx-auto">
                       1
                     </div>
                     <p className="mt-1">Apply</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-8 h-8 rounded-full bg-burgundy text-white flex items-center justify-center mx-auto">
+                    <div className="w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center mx-auto">
                       2
                     </div>
                     <p className="mt-1">Match</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-8 h-8 rounded-full bg-burgundy text-white flex items-center justify-center mx-auto">
+                    <div className="w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center mx-auto">
                       3
                     </div>
                     <p className="mt-1">Interview</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-8 h-8 rounded-full bg-burgundy text-white flex items-center justify-center mx-auto">
+                    <div className="w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center mx-auto">
                       4
                     </div>
                     <p className="mt-1">Apprentice</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-8 h-8 rounded-full bg-burgundy text-white flex items-center justify-center mx-auto">
+                    <div className="w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center mx-auto">
                       5
                     </div>
                     <p className="mt-1">Launch</p>
@@ -209,14 +206,14 @@ const Apprentices = () => {
                 </h3>
                 <button
                   onClick={() => setShowModal(false)}
-                  className="text-gray-500 hover:text-burgundy transition-colors"
+                  className="text-gray-500 hover:text-blue transition-colors"
                 >
                   <BsX size={24} />
                 </button>
               </div>
 
               <div className="space-y-6">
-                <div className="bg-burgundy/5 p-5 rounded-xl border border-burgundy/10">
+                <div className="bg-blue/5 p-5 rounded-xl border border-blue/10">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
                     Bridge the Experience Gap
                   </h4>
@@ -234,137 +231,106 @@ const Apprentices = () => {
                   </h4>
                   <ul className="space-y-2">
                     <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">
                         Practical Experience: Apply your technical knowledge to
                         real-world projects
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">
                         Financial Support: Receive a living stipend throughout
                         your apprenticeship
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">
+                        Professional Mentorship: Learn directly from industry
+                        professionals who guide your growth
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">
                         Career Acceleration: Over 80% of our apprentices secure
                         full-time employment after the program
                       </span>
                     </li>
-                    <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">
-                        Professional Mentorship: Learn directly from industry
-                        professionals
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">
-                        Networking Opportunities: Build connections in your
-                        field that can last throughout your career
-                      </span>
-                    </li>
                   </ul>
                 </div>
 
                 <div>
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
-                    Who Can Apply?
+                    Eligibility Requirements
                   </h4>
                   <ul className="space-y-2">
                     <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">
-                        Recent graduates with technical degrees from
-                        universities or polytechnics
+                        Recent graduate with a technical degree (computer
+                        science, engineering, etc.)
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">
-                        Fields include engineering, applied sciences,
-                        technology, and related disciplines
+                        Strong academic performance and demonstrated interest in
+                        the field
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <BsCheck2Circle className="text-burgundy text-xl mt-1 mr-3 flex-shrink-0" />
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">
-                        Motivated individuals eager to apply their education in
-                        a practical setting
+                        Willingness to commit to a 12-month full-time
+                        apprenticeship
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">
+                        Passion for learning and contributing to an SME's growth
                       </span>
                     </li>
                   </ul>
                 </div>
 
-                <div>
+                <div className="bg-blue/5 p-5 rounded-xl border border-blue/10">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
-                    The Apprenticeship Journey
+                    Application Process
                   </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-5 gap-4 my-6">
-                    {[
-                      {
-                        step: 1,
-                        title: "Apply",
-                        desc: "Submit your application through our platform",
-                      },
-                      {
-                        step: 2,
-                        title: "Match",
-                        desc: "Get connected with SMEs that need your specific skills",
-                      },
-                      {
-                        step: 3,
-                        title: "Interview",
-                        desc: "Meet potential employers to find the right fit",
-                      },
-                      {
-                        step: 4,
-                        title: "Apprentice",
-                        desc: "Engage in a 12-month, full-time, paid apprenticeship",
-                      },
-                      {
-                        step: 5,
-                        title: "Launch",
-                        desc: "Use your experience as a springboard to full-time employment",
-                      },
-                    ].map((step, i) => (
-                      <div
-                        key={i}
-                        className="text-center bg-white/50 p-4 rounded-xl border border-gray-100"
-                      >
-                        <div className="w-10 h-10 rounded-full bg-burgundy text-white flex items-center justify-center mx-auto mb-2">
-                          {step.step}
-                        </div>
-                        <h5 className="font-bold">{step.title}</h5>
-                        <p className="text-sm text-gray-600 mt-2">
-                          {step.desc}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+                  <p className="text-gray-700 mb-4">
+                    Our streamlined application process connects you with the
+                    right opportunity:
+                  </p>
+                  <ol className="space-y-3 list-decimal list-inside text-gray-700">
+                    <li>Complete our online application form</li>
+                    <li>
+                      Participate in our screening process to assess your skills
+                      and interests
+                    </li>
+                    <li>
+                      Interview with SMEs that match your profile and career
+                      goals
+                    </li>
+                    <li>Receive placement and begin your apprenticeship</li>
+                    <li>
+                      Transition to full-time employment or other opportunities
+                      after 12 months
+                    </li>
+                  </ol>
                 </div>
 
-                <div className="bg-gradient-to-r from-burgundy/10 to-blue-50 p-6 rounded-xl mt-6">
-                  <h4 className="font-bold text-gray-900 mb-2 text-center">
-                    Ready to Start Your Professional Journey?
-                  </h4>
-                  <p className="text-gray-700 mb-4 text-center">
-                    Join ATAN and transform your technical education into
-                    practical experience that employers value.
-                  </p>
-                  <div className="flex justify-center">
-                    <a
-                      href={apprenticesContent.ctaLink}
-                      target="_blank"
-                      className="inline-flex items-center px-6 py-2 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-colors"
-                    >
-                      Apply as a Graduate <FaArrowRight className="ml-2" />
-                    </a>
-                  </div>
+                <div className="mt-6 flex justify-end">
+                  <a
+                    href={apprenticesContent.ctaLink}
+                    target="_blank"
+                    className="inline-flex items-center px-8 py-3 bg-blue text-white font-medium rounded-full hover:bg-blue/90 transition-colors"
+                  >
+                    {apprenticesContent.ctaText}
+                    <FaArrowRight className="ml-2" />
+                  </a>
                 </div>
               </div>
             </motion.div>

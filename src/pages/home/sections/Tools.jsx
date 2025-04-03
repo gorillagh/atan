@@ -16,9 +16,9 @@ const Tools = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-gray-900"
           >
-            Frequently <span className="text-burgundy">Asked Questions</span>
+            Frequently <span className="text-purple">Asked Questions</span>
           </motion.h2>
-          <div className="w-20 h-1 bg-burgundy mx-auto mt-4 mb-6"></div>
+          <div className="w-20 h-1 bg-orange mx-auto mt-4 mb-6"></div>
           {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Resources to help employers, universities, and apprentices make
             informed decisions.

@@ -39,21 +39,21 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
       title: "Apprentice",
       description: "Start your journey as a technical apprentice",
       path: "https://docs.google.com/forms/d/1QqaMzo8JNZzq_HW-NbF4Whykbf1BuKmKTRXm9qEC2N8/viewform?ts=6798a257&edit_requested=true",
-      icon: <FaGraduationCap size={24} className="text-burgundy" />,
+      icon: <FaGraduationCap size={24} className="text-purple" />,
     },
     {
       id: "employer",
       title: "Employer",
       path: "https://docs.google.com/forms/d/e/1FAIpQLSfLAqoxl6C4PRUGSyvGPhcd3vA0N_nZ-M4O1WmTnwy8jaYNsQ/viewform",
       description: "Partner with us to find talented apprentices",
-      icon: <FaBuilding size={24} className="text-burgundy" />,
+      icon: <FaBuilding size={24} className="text-purple" />,
     },
     {
       id: "university",
       title: "University",
       path: "https://docs.google.com/forms/d/e/1FAIpQLSfLAqoxl6C4PRUGSyvGPhcd3vA0N_nZ-M4O1WmTnwy8jaYNsQ/viewform",
       description: "Collaborate to enhance technical education",
-      icon: <FaUniversity size={24} className="text-burgundy" />,
+      icon: <FaUniversity size={24} className="text-purple" />,
     },
   ];
   return (
@@ -69,13 +69,13 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
               exit="exit"
               className="bg-white rounded-3xl shadow-2xl w-full max-w-md mx-4 overflow-hidden"
             >
-              <div className="p-5 bg-burgundy/5 border-b border-gray-100 flex justify-between items-center">
+              <div className="p-5 bg-blue/5 border-b border-gray-100 flex justify-between items-center">
                 <h3 className="text-xl font-bold text-gray-900">
                   Choose Application Type
                 </h3>
                 <button
                   onClick={toggleModal}
-                  className="p-2 rounded-full hover:bg-burgundy/10 text-gray-700"
+                  className="p-2 rounded-full hover:bg-orange/10 text-gray-700"
                 >
                   <IoMdClose size={20} />
                 </button>
@@ -83,8 +83,8 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
 
               <div className="p-6">
                 <p className="text-gray-600 mb-6">
-                  Select how you'd like to be part of the Africa Technical
-                  Apprentice Network:
+                  Select how you'd like to be part of the African Technical
+                  Apprenticeship Network:
                 </p>
 
                 <div className="space-y-3">
@@ -96,7 +96,7 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
                       whileTap={{ scale: 0.98 }}
                       onClick={toggleModal}
                       target="_blank"
-                      className="block p-4 border border-gray-200 rounded-3xl hover:border-burgundy/30 hover:bg-burgundy/5 transition-all flex items-start gap-2 sm:gap-4"
+                      className="block p-4 border border-gray-200 rounded-3xl hover:border-purple/30 hover:bg-purple/5 transition-all flex items-start gap-2 sm:gap-4"
                     >
                       <div className="mt-1">{option.icon}</div>
                       <div>
@@ -107,7 +107,7 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
                           {option.description}
                         </p>
                       </div>
-                      <FaArrowRight className="ml-auto text-burgundy self-center opacity-70 flex-shrink-0" />
+                      <FaArrowRight className="ml-auto text-orange self-center opacity-70 flex-shrink-0" />
                     </motion.a>
                   ))}
                 </div>

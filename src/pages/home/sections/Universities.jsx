@@ -118,9 +118,9 @@ const Universities = () => {
       aria-labelledby="universities-heading"
     >
       {/* Enhanced decorative elements */}
-      <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-burgundy/5 blur-3xl"></div>
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-burgundy/5 blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 w-64 h-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-100/30 blur-3xl"></div>
+      <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-purple/5 blur-3xl"></div>
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-purple/5 blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 w-64 h-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue/20 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header section with subtle accent */}
@@ -132,11 +132,11 @@ const Universities = () => {
           className="text-center mb-16 max-w-3xl mx-auto"
         >
           <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/10 text-burgundy mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue/10 text-blue mb-6"
             role="presentation"
           >
             <universitiesContent.icon
-              className="text-burgundy"
+              className="text-blue"
               aria-hidden="true"
             />
             <span className="font-medium">For Education Partners</span>
@@ -147,9 +147,9 @@ const Universities = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
             Elevating{" "}
-            <span className="text-burgundy relative">
+            <span className="text-blue relative">
               {universitiesContent.title}
-              <span className="absolute -bottom-2 left-0 w-full h-1 bg-burgundy/20 rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-blue/20 rounded-full"></span>
             </span>
           </h2>
 
@@ -175,11 +175,11 @@ const Universities = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="group p-5 rounded-xl bg-white/80 backdrop-blur-sm border border-white/70 shadow-sm hover:shadow-md transition-all hover:bg-white/90 focus-within:ring-2 focus-within:ring-burgundy/30"
+                  className="group p-5 rounded-xl bg-white/80 backdrop-blur-sm border border-white/70 shadow-sm hover:shadow-md transition-all hover:bg-white/90 focus-within:ring-2 focus-within:ring-blue/30"
                   tabIndex={0}
                 >
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="bg-burgundy/10 p-3 rounded-lg group-hover:bg-burgundy/20 transition-colors group-focus-within:bg-burgundy/20">
+                    <div className="bg-blue/10 p-3 rounded-lg group-hover:bg-blue/20 transition-colors group-focus-within:bg-blue/20">
                       {feature.icon}
                     </div>
                     <h3 className="font-bold text-lg text-gray-900">
@@ -191,33 +191,12 @@ const Universities = () => {
               ))}
             </div>
 
-            {/* Added accent card for visual appeal */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-gradient-to-br from-burgundy/10 to-white/80 p-6 rounded-xl border border-white/70 shadow-md mb-8"
-            >
-              <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                <span className="w-1 h-6 bg-burgundy rounded-full mr-3"></span>
-                Creating Seamless Educational Pathways
-              </h4>
-              <p className="text-gray-700 leading-relaxed">
-                ATAN believes that education doesn't end at graduation. By
-                creating structured transitions into the workforce, we help
-                universities fulfill their mission of preparing students for
-                successful futures while connecting them with SMEs that can
-                benefit from their technical expertise.
-              </p>
-            </motion.div>
-
             <div className="flex flex-wrap gap-5 items-center">
               <a
                 href={universitiesContent.ctaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center px-8 py-3.5 bg-burgundy text-white font-medium rounded-full hover:bg-burgundy/90 transition-all hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:ring-offset-2"
+                className="flex items-center px-8 py-3.5 bg-blue text-white font-medium rounded-full hover:bg-blue/90 transition-all hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-blue/50 focus:ring-offset-2"
                 aria-label="Join as a University Partner - Opens in a new tab"
               >
                 {universitiesContent.ctaText}{" "}
@@ -226,7 +205,7 @@ const Universities = () => {
 
               <button
                 onClick={() => setShowModal(true)}
-                className="relative group flex items-center text-burgundy font-medium transition-colors focus:outline-none focus:underline"
+                className="relative group flex items-center text-blue font-medium transition-colors focus:outline-none focus:underline"
                 aria-haspopup="dialog"
                 aria-expanded={showModal}
               >
@@ -237,7 +216,7 @@ const Universities = () => {
                 >
                   →
                 </span>
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-burgundy/50 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue/50 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
               </button>
             </div>
           </motion.div>
@@ -248,109 +227,138 @@ const Universities = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:w-1/2 w-full"
+            className="lg:w-1/2"
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl transform hover:scale-[1.01] transition-transform duration-500">
-              <div className="absolute inset-0 bg-[url(/universities.avif)] bg-cover bg-center transform hover:scale-105 transition-transform duration-7000"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-burgundy/20 via-transparent to-burgundy/10"></div>
-
-              <div className="absolute bottom-6 left-6 right-6">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-xl border border-white/70"
-                >
-                  <div className="flex items-center mb-4 justify-between">
-                    <div className="flex items-center">
-                      <div className="w-1.5 h-8 bg-burgundy rounded-full mr-3"></div>
-                      <h3 className="font-bold text-gray-900 text-lg">
-                        Partner Success Stories
-                      </h3>
-                    </div>
-
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() =>
-                          setCurrentTestimonial((prev) =>
-                            prev === 0 ? testimonials.length - 1 : prev - 1
-                          )
-                        }
-                        className="w-8 h-8 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy hover:bg-burgundy/20 transition-colors"
-                        aria-label="Previous testimonial"
-                      >
-                        <FaChevronLeft size={14} />
-                      </button>
-                      <button
-                        onClick={() =>
-                          setCurrentTestimonial((prev) =>
-                            prev === testimonials.length - 1 ? 0 : prev + 1
-                          )
-                        }
-                        className="w-8 h-8 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy hover:bg-burgundy/20 transition-colors"
-                        aria-label="Next testimonial"
-                      >
-                        <FaChevronRight size={14} />
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="relative overflow-hidden">
-                    <AnimatePresence mode="wait">
-                      <motion.div
-                        key={currentTestimonial}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.3 }}
-                        className="relative"
-                      >
-                        <FaQuoteLeft
-                          className="text-burgundy/20 text-4xl absolute top-0 left-0"
-                          aria-hidden="true"
-                        />
-                        <p className="text-gray-600 italic pl-8 pt-2">
-                          "{testimonials[currentTestimonial].quote}"
-                        </p>
-                        <div className="mt-3 flex items-center">
-                          <div className="w-8 h-8 rounded-full bg-burgundy/20 flex items-center justify-center text-burgundy font-bold mr-2">
-                            {testimonials[currentTestimonial].initials}
-                          </div>
-                          <div>
-                            <p className="font-medium text-burgundy">
-                              {testimonials[currentTestimonial].author}
-                            </p>
-                            <p className="text-sm text-gray-600">
-                              {testimonials[currentTestimonial].title}
-                            </p>
-                          </div>
-                        </div>
-                      </motion.div>
-                    </AnimatePresence>
-
-                    {/* Testimonial pagination indicators */}
-                    <div
-                      className="flex justify-center gap-2 mt-4"
-                      aria-hidden="true"
-                    >
-                      {testimonials.map((_, index) => (
-                        <button
-                          key={index}
-                          onClick={() => setCurrentTestimonial(index)}
-                          className={`w-2 h-2 rounded-full transition-all ${
-                            index === currentTestimonial
-                              ? "bg-burgundy w-6"
-                              : "bg-burgundy/30"
-                          }`}
-                          aria-label={`Go to testimonial ${index + 1}`}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
+            {/* Main image with overlay */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl mb-8 aspect-video">
+              <img
+                src="/universities.avif"
+                alt="University students and professors collaborating"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-purple/40 to-transparent"></div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent h-1/3"></div>
+              <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                <h3 className="text-xl font-bold mb-1">
+                  Connecting Education & Industry
+                </h3>
+                <p className="text-white/80 text-sm">
+                  Bridging the gap between academic learning and practical
+                  application
+                </p>
               </div>
             </div>
+            {/* Added accent card for visual appeal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-gradient-to-br from-blue/10 to-white/80 p-6 rounded-xl border border-white/70 shadow-md mb-8"
+            >
+              <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="w-1 h-6 bg-blue rounded-full mr-3"></span>
+                Creating Seamless Educational Pathways
+              </h4>
+              <p className="text-gray-700 leading-relaxed">
+                ATAN believes that education doesn't end at graduation. By
+                creating structured transitions into the workforce, we help
+                universities fulfill their mission of preparing students for
+                successful futures while connecting them with SMEs that can
+                benefit from their technical expertise.
+              </p>
+            </motion.div>
+            {/* Testimonial section */}
+            {/* <div className="relative overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-md p-6">
+              <div className="absolute text-purple/10 top-6 left-4">
+                <FaQuoteLeft size={80} aria-hidden="true" />
+              </div>
+
+              <div className="relative z-10">
+                <h3 className="text-lg font-bold text-gray-900 mb-6">
+                  What Our Partner Universities Say
+                </h3>
+
+                <div className="relative overflow-hidden h-[150px]">
+                  {testimonials.map((testimonial, index) => (
+                    <AnimatePresence mode="wait" initial={false} key={index}>
+                      {currentTestimonial === index && (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -20 }}
+                          transition={{ duration: 0.5 }}
+                          className="absolute inset-0"
+                        >
+                          <p className="text-gray-700 mb-6 italic">
+                            "{testimonial.quote}"
+                          </p>
+                          <div className="flex items-center">
+                            <div className="w-10 h-10 rounded-full bg-purple/10 text-purple flex items-center justify-center font-bold mr-3">
+                              {testimonial.initials}
+                            </div>
+                            <div>
+                              <p className="font-bold text-gray-900">
+                                {testimonial.author}
+                              </p>
+                              <p className="text-sm text-gray-600">
+                                {testimonial.title}
+                              </p>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  ))}
+                </div>
+
+               
+                <div className="flex justify-between items-center mt-8">
+                  <div className="flex space-x-2">
+                    {testimonials.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentTestimonial(index)}
+                        className={`w-2.5 h-2.5 rounded-full transition-all ${
+                          currentTestimonial === index
+                            ? "bg-blue w-5"
+                            : "bg-gray-300"
+                        }`}
+                        aria-label={`View testimonial ${index + 1}`}
+                      ></button>
+                    ))}
+                  </div>
+
+                  <div className="flex space-x-2">
+                    <button
+                      onClick={() =>
+                        setCurrentTestimonial(
+                          (prev) =>
+                            (prev - 1 + testimonials.length) %
+                            testimonials.length
+                        )
+                      }
+                      className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                      aria-label="Previous testimonial"
+                    >
+                      <FaChevronLeft size={14} className="text-gray-600" />
+                    </button>
+                    <button
+                      onClick={() =>
+                        setCurrentTestimonial(
+                          (prev) => (prev + 1) % testimonials.length
+                        )
+                      }
+                      className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                      aria-label="Next testimonial"
+                    >
+                      <FaChevronRight size={14} className="text-gray-600" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
@@ -362,176 +370,188 @@ const Universities = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto"
             onClick={() => setShowModal(false)}
             role="dialog"
-            aria-labelledby="modal-title"
             aria-modal="true"
+            aria-labelledby="modal-title"
           >
             <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="bg-white/95 backdrop-blur-md rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 border border-white/50 shadow-2xl"
+              className="bg-white rounded-xl max-w-3xl w-full max-h-[80vh] overflow-y-auto p-6 sm:p-8 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex justify-between items-center mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-10 bg-burgundy rounded-full"></div>
-                  <h3
-                    id="modal-title"
-                    className="text-2xl font-bold text-gray-900"
-                  >
-                    University Partnership Program
-                  </h3>
-                </div>
+              <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-100">
+                <h3
+                  id="modal-title"
+                  className="text-2xl font-bold text-gray-900"
+                >
+                  University Partnership Program
+                </h3>
                 <button
                   onClick={() => setShowModal(false)}
-                  className="w-8 h-8 rounded-full bg-gray-100 hover:bg-burgundy/10 flex items-center justify-center text-gray-500 hover:text-burgundy transition-colors"
+                  className="p-2 rounded-full hover:bg-gray-100 transition-colors text-gray-500"
                   aria-label="Close dialog"
                 >
-                  <BsX size={24} aria-hidden="true" />
+                  <BsX size={24} />
                 </button>
               </div>
 
               <div className="space-y-8">
-                <div className="bg-gradient-to-r from-burgundy/10 to-blue-50/50 p-6 rounded-xl">
+                <div>
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
-                    Partner with ATAN to Strengthen Your Graduate Success
+                    Why Partner with ATAN?
                   </h4>
-                  <p className="text-gray-700 leading-relaxed">
-                    Universities strive to prepare students for successful
-                    careers, but the transition from education to employment
-                    remains challenging. By partnering with ATAN, you can
-                    provide your technical graduates with a clear pathway to
-                    meaningful employment.
+                  <p className="text-gray-700 mb-4">
+                    Joining forces with ATAN creates a powerful connection
+                    between your university and the technical workforce. Here's
+                    how your institution benefits:
                   </p>
-                </div>
 
-                <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-1.5 h-6 bg-burgundy/70 rounded-full mr-3"></span>
-                    Benefits of University Partnership
-                  </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {[
-                      {
-                        icon: <FaChartLine className="text-burgundy" />,
-                        title: "Improved Employment Outcomes",
-                        desc: "Enhance your institution's graduate employment statistics",
-                      },
-                      {
-                        icon: <MdBusinessCenter className="text-burgundy" />,
-                        title: "Industry Connections",
-                        desc: "Strengthen relationships with local and regional businesses",
-                      },
-                      {
-                        icon: <MdSchool className="text-burgundy" />,
-                        title: "Curriculum Insights",
-                        desc: "Gain valuable feedback on industry needs to inform teaching",
-                      },
-                      {
-                        icon: <FaGraduationCap className="text-burgundy" />,
-                        title: "Increased Attractiveness",
-                        desc: "Offer prospective students a clear path from education to employment",
-                      },
-                      {
-                        icon: <FaHandshake className="text-burgundy" />,
-                        title: "Alumni Success",
-                        desc: "Build a network of successful graduates in technical fields",
-                      },
-                      {
-                        icon: <MdAccessibility className="text-burgundy" />,
-                        title: "Inclusive Opportunities",
-                        desc: "Support diverse graduates in accessing quality employment",
-                      },
-                    ].map((benefit, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.3, delay: i * 0.05 }}
-                        className="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 focus-within:ring-2 focus-within:ring-burgundy/30"
-                        tabIndex={0}
-                      >
-                        <div className="mt-1 text-xl bg-burgundy/10 p-2 rounded-lg">
-                          {benefit.icon}
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-gray-900">
-                            {benefit.title}
-                          </h5>
-                          <p className="text-sm text-gray-600">
-                            {benefit.desc}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-1.5 h-6 bg-burgundy/70 rounded-full mr-3"></span>
-                    How the Partnership Works
-                  </h4>
-                  <ul className="space-y-3 pl-2">
-                    {[
-                      "We connect your technical graduates with SMEs seeking their specific skills",
-                      "Graduates participate in structured, 12-month apprenticeships",
-                      "Universities can stay connected with graduates throughout their apprenticeship journey",
-                      "Potential opportunities for academic credit arrangements (contact us to discuss options)",
-                      "Regular data reports on graduate performance and employment outcomes",
-                      "Annual partnership review with recommendations for curriculum alignment",
-                    ].map((item, i) => (
-                      <motion.li
-                        key={i}
-                        className="flex items-start bg-white/70 p-3 rounded-lg hover:bg-white/90 transition-colors"
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3, delay: i * 0.05 }}
-                      >
-                        <BsCheck2Circle
-                          className="text-burgundy text-xl mt-0.5 mr-3 flex-shrink-0"
-                          aria-hidden="true"
-                        />
-                        <span className="text-gray-700">{item}</span>
-                      </motion.li>
-                    ))}
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">
+                        <strong>Enhanced Graduate Outcomes:</strong> Improve
+                        employment statistics and deliver on promises to
+                        students.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">
+                        <strong>Curriculum Relevance:</strong> Gain industry
+                        feedback to keep programs aligned with market needs.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">
+                        <strong>Business Connections:</strong> Build sustainable
+                        relationships with SMEs across various sectors.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <BsCheck2Circle className="text-blue text-xl mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">
+                        <strong>Data-Driven Insights:</strong> Access analytics
+                        on skills gaps and market demands for better planning.
+                      </span>
+                    </li>
                   </ul>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                <div className="p-5 bg-blue/5 rounded-xl">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
-                    Creating Seamless Educational Pathways
+                    The Partnership Process
                   </h4>
-                  <p className="text-gray-700 mb-5 leading-relaxed">
-                    ATAN believes that education doesn't end at graduation. By
-                    creating structured transitions into the workforce, we help
-                    universities fulfill their mission of preparing students for
-                    successful futures.
+                  <p className="text-gray-700 mb-4">
+                    Our collaborative approach integrates seamlessly with your
+                    existing programs:
                   </p>
-                  <div className="p-5 bg-burgundy/5 rounded-xl border border-burgundy/10">
-                    <h5 className="font-bold text-gray-900 mb-2">
-                      Join Our Educational Network
-                    </h5>
-                    <p className="text-gray-700 mb-5">
-                      Partner with ATAN to create stronger connections between
-                      your educational offerings and the needs of employers in
-                      your region.
-                    </p>
-                    <a
-                      href={universitiesContent.ctaLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-6 py-2.5 bg-burgundy text-white font-medium rounded-lg hover:bg-burgundy/90 transition-all hover:shadow-md focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:ring-offset-2"
-                      aria-label="Become a University Partner - Opens in a new tab"
-                    >
-                      Become a University Partner{" "}
-                      <FaArrowRight className="ml-2" aria-hidden="true" />
-                    </a>
+
+                  <ol className="space-y-4">
+                    <li className="flex items-start">
+                      <div className="w-8 h-8 rounded-full bg-blue text-white flex-shrink-0 flex items-center justify-center font-bold mr-3">
+                        1
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900">Collaborate</p>
+                        <p className="text-gray-700">
+                          We work with your career services and academic
+                          departments to understand graduate profiles and
+                          strengths.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-8 h-8 rounded-full bg-blue text-white flex-shrink-0 flex items-center justify-center font-bold mr-3">
+                        2
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900">Connect</p>
+                        <p className="text-gray-700">
+                          We match your graduates with SMEs that need their
+                          specific technical skills and knowledge.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-8 h-8 rounded-full bg-blue text-white flex-shrink-0 flex items-center justify-center font-bold mr-3">
+                        3
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900">Support</p>
+                        <p className="text-gray-700">
+                          Throughout the apprenticeship, we provide mentorship
+                          and professional development resources.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-8 h-8 rounded-full bg-blue text-white flex-shrink-0 flex items-center justify-center font-bold mr-3">
+                        4
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900">Feedback</p>
+                        <p className="text-gray-700">
+                          We share insights from SMEs about graduate performance
+                          and skills gaps to help refine your programs.
+                        </p>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">
+                    Success Metrics
+                  </h4>
+                  <p className="text-gray-700 mb-4">
+                    Our university partners typically see:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div className="bg-white p-4 rounded-lg border border-gray-200">
+                      <p className="text-3xl font-bold text-blue">40%</p>
+                      <p className="text-gray-700">
+                        Increase in technical graduate employment rates
+                      </p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-gray-200">
+                      <p className="text-3xl font-bold text-blue">85%</p>
+                      <p className="text-gray-700">
+                        Of apprentices secure permanent roles after the program
+                      </p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-gray-200">
+                      <p className="text-3xl font-bold text-blue">25+</p>
+                      <p className="text-gray-700">
+                        New SME connections per university on average
+                      </p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-gray-200">
+                      <p className="text-3xl font-bold text-blue">92%</p>
+                      <p className="text-gray-700">
+                        Satisfaction rate among partner universities
+                      </p>
+                    </div>
                   </div>
+                </div>
+
+                <div className="flex justify-end pt-4 border-t border-gray-100">
+                  <a
+                    href={universitiesContent.ctaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-8 py-3 bg-blue text-white font-medium rounded-full hover:bg-blue/90 transition-colors"
+                  >
+                    {universitiesContent.ctaText}{" "}
+                    <FaArrowRight className="ml-2" />
+                  </a>
                 </div>
               </div>
             </motion.div>
