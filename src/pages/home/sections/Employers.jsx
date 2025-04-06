@@ -24,7 +24,7 @@ const Employers = () => {
         icon: <FaUserGraduate size={20} />,
         title: "Access to Fresh Skills",
         description:
-          "Tap into the latest technical knowledge from university graduates.",
+          "Access fresh skills from vetted graduates, reducing your team's hiring time and effort.",
       },
       {
         icon: <FaCalculator size={20} />,

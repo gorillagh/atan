@@ -79,7 +79,7 @@ const Universities = () => {
     title: "Universities",
     icon: FaUniversity,
     description:
-      "Enhance graduate outcomes by providing a clear pathway from education to meaningful employment for your technical students.",
+      "Enhancing graduate outcomes by providing clear pathways from education to meaningful employment for technical students across universities, TVETs, colleges, and youth-focused organizations.",
     features: [
       {
         icon: <FaChartLine size={22} />,

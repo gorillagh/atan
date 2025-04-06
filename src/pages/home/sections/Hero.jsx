@@ -81,8 +81,8 @@ const Hero = () => {
                 For Growth
               </h1>
               <p className="mt-6 text-xl text-gray-600 max-w-2xl">
-                Unlock the potential of your SME by connecting with talented
-                recent graduates eager to make a difference
+                Connect talented graduates with innovative SMEs to unlock
+                potential and launch careers.
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-4">

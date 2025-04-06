@@ -4,6 +4,7 @@ import Contact from "./sections/Contact";
 import CTA from "./sections/CTA";
 import Employers from "./sections/Employers";
 import Hero from "./sections/Hero";
+import Teams from "./sections/Teams";
 import Testimonials from "./sections/Testimonials";
 import Tools from "./sections/Tools";
 import Universities from "./sections/Universities";
@@ -16,7 +17,7 @@ const Home = () => {
       <Employers />
       <Apprentices />
       <Universities />
-      {/* <Testimonials /> */}
+      <Teams />
       <CTA />
       <Tools />
       <Contact />
