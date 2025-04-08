@@ -44,11 +44,8 @@ const CTA = () => {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight"
                 >
-                  Ready to{" "}
-                  <span className="text-white underline decoration-4 decoration-orange/60">
-                    Transform
-                  </span>{" "}
-                  Your Future?
+                  Ready to <span className="text-white ">Transform</span> Your
+                  Future?
                 </motion.h2>
 
                 <motion.p
@@ -69,7 +66,7 @@ const CTA = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4 w-full md:w-auto"
+                className="flex flex-col sm:flex-row gap-4 w-full md:w-auto items-center justify-center"
               >
                 <button
                   onClick={toggleModal}

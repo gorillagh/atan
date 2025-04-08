@@ -25,7 +25,7 @@ const ScrollToTop = () => {
 
   return (
     <button
-      className={`fixed bg-burgundy text-white dark:bg-primaryGreen-dark  hover:bg-primaryGreen-hover-light dark:hover:bg-primaryGreen-hover-dark" bottom-10 right-10 z-50 rounded-full bg-secondary p-3 cursor-pointer  shadow-lg ${
+      className={`fixed bg-orange text-white dark:bg-primaryGreen-dark  hover:bg-primaryGreen-hover-light dark:hover:bg-primaryGreen-hover-dark" bottom-10 right-10 z-50 rounded-full bg-secondary p-3 cursor-pointer  shadow-lg ${
         showScroll ? "block" : "hidden"
       }`}
       onClick={scrollTop}

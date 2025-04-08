@@ -57,7 +57,7 @@ const Employers = () => {
       className={`py-20 ${employersContent.bgColor}`}
     >
       {/* Mobile title and description (hidden on desktop) */}
-      <div className="flex flex-col md:hidden">
+      <div className="flex flex-col md:hidden px-6">
         <div className="flex items-center gap-3 mb-4">
           <employersContent.icon className="text-orange text-2xl" />
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -128,7 +128,7 @@ const Employers = () => {
             className="lg:w-1/2"
           >
             {/* Desktop title and description (hidden on mobile) */}
-            <div className="hidden md:flex flex-col">
+            <div className="hidden md:flex flex-col ">
               <div className="flex items-center gap-3 mb-4">
                 <employersContent.icon className="text-orange text-2xl" />
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -148,7 +148,7 @@ const Employers = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-purple/30"></div>
 
               {/* Stats overlay at bottom */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md rounded-xl p-4 shadow-lg border border-white/50">
+              {/* <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md rounded-xl p-4 shadow-lg border border-white/50">
                 <h3 className="font-bold text-gray-900 mb-3">
                   Business Impact
                 </h3>
@@ -172,7 +172,7 @@ const Employers = () => {
                     <p className="mt-1">ROI</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>

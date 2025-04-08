@@ -56,7 +56,7 @@ const Apprentices = () => {
       id={apprenticesContent.id}
       className={`py-20 ${apprenticesContent.bgColor}`}
     >
-      <div className="flex flex-col md:hidden">
+      <div className="flex flex-col px-6 md:hidden">
         <div className="flex items-center gap-3 mb-4">
           <apprenticesContent.icon className="text-blue text-2xl" />
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">

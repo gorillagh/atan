@@ -114,251 +114,130 @@ const Universities = () => {
   return (
     <section
       id={universitiesContent.id}
-      className={`py-24 ${universitiesContent.bgColor} relative overflow-hidden`}
-      aria-labelledby="universities-heading"
+      className={`py-20 ${universitiesContent.bgColor}`}
     >
-      {/* Enhanced decorative elements */}
-      <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-purple/5 blur-3xl"></div>
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-purple/5 blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 w-64 h-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue/20 blur-3xl"></div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header section with subtle accent */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16 max-w-3xl mx-auto"
-        >
-          <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue/10 text-blue mb-6"
-            role="presentation"
-          >
-            <universitiesContent.icon
-              className="text-blue"
-              aria-hidden="true"
-            />
-            <span className="font-medium">For Education Partners</span>
-          </div>
-
-          <h2
-            id="universities-heading"
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
-          >
-            Elevating{" "}
-            <span className="text-blue relative">
-              {universitiesContent.title}
-              <span className="absolute -bottom-2 left-0 w-full h-1 bg-blue/20 rounded-full"></span>
-            </span>
+      <div className="flex flex-col px-6 md:hidden">
+        <div className="flex items-center gap-3 mb-4">
+          <universitiesContent.icon className="text-blue text-2xl" />
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            For <span className="text-blue">{universitiesContent.title}</span>
           </h2>
+        </div>
 
-          <p className="text-xl text-gray-600 leading-relaxed">
-            {universitiesContent.description}
-          </p>
-        </motion.div>
-
-        <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-16">
-          {/* Left column with features */}
+        <p className="text-xl text-gray-600 mb-8">
+          {universitiesContent.description}
+        </p>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:w-1/2 flex flex-col"
+            className="lg:w-1/2"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8 flex-grow">
+            <div className="space-y-6 mb-8">
               {universitiesContent.features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="group p-5 rounded-xl bg-white/80 backdrop-blur-sm border border-white/70 shadow-sm hover:shadow-md transition-all hover:bg-white/90 focus-within:ring-2 focus-within:ring-blue/30"
-                  tabIndex={0}
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white/40 backdrop-blur-md shadow-sm border border-white/50"
                 >
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="bg-blue/10 p-3 rounded-lg group-hover:bg-blue/20 transition-colors group-focus-within:bg-blue/20">
-                      {feature.icon}
-                    </div>
-                    <h3 className="font-bold text-lg text-gray-900">
-                      {feature.title}
-                    </h3>
+                  <div className="mt-1 bg-blue/10 p-2 rounded-lg">
+                    {feature.icon}
                   </div>
-                  <p className="text-gray-600 pl-14">{feature.description}</p>
+                  <div>
+                    <h3 className="font-bold text-gray-900">{feature.title}</h3>
+                    <p className="text-gray-600 mt-1">{feature.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-5 items-center">
+            <div className="flex flex-wrap gap-4 items-center">
               <a
                 href={universitiesContent.ctaLink}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center px-8 py-3.5 bg-blue text-white font-medium rounded-full hover:bg-blue/90 transition-all hover:shadow-lg hover:scale-105 transform focus:outline-none focus:ring-2 focus:ring-blue/50 focus:ring-offset-2"
-                aria-label="Join as a University Partner - Opens in a new tab"
+                className="inline-flex items-center px-8 py-3 bg-blue text-white font-medium rounded-full hover:bg-blue/90 transition-colors"
               >
-                {universitiesContent.ctaText}{" "}
-                <FaArrowRight className="ml-2" aria-hidden="true" />
+                {universitiesContent.ctaText} <FaArrowRight className="ml-2" />
               </a>
 
               <button
                 onClick={() => setShowModal(true)}
-                className="relative group flex items-center text-blue font-medium transition-colors focus:outline-none focus:underline"
-                aria-haspopup="dialog"
-                aria-expanded={showModal}
+                className="inline-flex items-center text-blue font-medium hover:text-blue/80 transition-colors underline"
               >
                 Learn more about partnerships
-                <span
-                  className="ml-1 group-hover:ml-2 transition-all duration-300"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue/50 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
               </button>
             </div>
           </motion.div>
 
-          {/* Right column with image and testimonial */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:w-1/2"
           >
-            {/* Main image with overlay */}
-            <div className="relative rounded-2xl overflow-hidden shadow-xl mb-8 aspect-video">
-              <img
-                src="/universities.avif"
-                alt="University students and professors collaborating"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-purple/40 to-transparent"></div>
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent h-1/3"></div>
-              <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                <h3 className="text-xl font-bold mb-1">
-                  Connecting Education & Industry
+            <div className="hidden md:flex flex-col">
+              <div className="flex items-center gap-3 mb-4">
+                <universitiesContent.icon className="text-blue text-2xl" />
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  For{" "}
+                  <span className="text-blue">{universitiesContent.title}</span>
+                </h2>
+              </div>
+
+              <p className="text-xl text-gray-600 mb-8">
+                {universitiesContent.description}
+              </p>
+            </div>
+            <div className="relative rounded-3xl overflow-hidden bg-white/30 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
+              <div className="absolute inset-0 bg-[url(/universities.avif)] bg-cover bg-center"></div>
+              <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-purple/30"></div>
+
+              <div className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md rounded-xl p-4 shadow-lg border border-white/50">
+                <h3 className="font-bold text-gray-900 mb-3">
+                  Your Partnership Journey
                 </h3>
-                <p className="text-white/80 text-sm">
-                  Bridging the gap between academic learning and practical
-                  application
-                </p>
+                <div className="flex justify-between text-sm">
+                  <div className="text-center">
+                    <div className="w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center mx-auto">
+                      1
+                    </div>
+                    <p className="mt-1">Connect</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center mx-auto">
+                      2
+                    </div>
+                    <p className="mt-1">Integrate</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center mx-auto">
+                      3
+                    </div>
+                    <p className="mt-1">Match</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center mx-auto">
+                      4
+                    </div>
+                    <p className="mt-1">Support</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center mx-auto">
+                      5
+                    </div>
+                    <p className="mt-1">Grow</p>
+                  </div>
+                </div>
               </div>
             </div>
-            {/* Added accent card for visual appeal */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-gradient-to-br from-blue/10 to-white/80 p-6 rounded-xl border border-white/70 shadow-md mb-8"
-            >
-              <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                <span className="w-1 h-6 bg-blue rounded-full mr-3"></span>
-                Creating Seamless Educational Pathways
-              </h4>
-              <p className="text-gray-700 leading-relaxed">
-                ATAN believes that education doesn't end at graduation. By
-                creating structured transitions into the workforce, we help
-                universities fulfill their mission of preparing students for
-                successful futures while connecting them with SMEs that can
-                benefit from their technical expertise.
-              </p>
-            </motion.div>
-            {/* Testimonial section */}
-            {/* <div className="relative overflow-hidden bg-white rounded-2xl border border-gray-100 shadow-md p-6">
-              <div className="absolute text-purple/10 top-6 left-4">
-                <FaQuoteLeft size={80} aria-hidden="true" />
-              </div>
-
-              <div className="relative z-10">
-                <h3 className="text-lg font-bold text-gray-900 mb-6">
-                  What Our Partner Universities Say
-                </h3>
-
-                <div className="relative overflow-hidden h-[150px]">
-                  {testimonials.map((testimonial, index) => (
-                    <AnimatePresence mode="wait" initial={false} key={index}>
-                      {currentTestimonial === index && (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -20 }}
-                          transition={{ duration: 0.5 }}
-                          className="absolute inset-0"
-                        >
-                          <p className="text-gray-700 mb-6 italic">
-                            "{testimonial.quote}"
-                          </p>
-                          <div className="flex items-center">
-                            <div className="w-10 h-10 rounded-full bg-purple/10 text-purple flex items-center justify-center font-bold mr-3">
-                              {testimonial.initials}
-                            </div>
-                            <div>
-                              <p className="font-bold text-gray-900">
-                                {testimonial.author}
-                              </p>
-                              <p className="text-sm text-gray-600">
-                                {testimonial.title}
-                              </p>
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  ))}
-                </div>
-
-               
-                <div className="flex justify-between items-center mt-8">
-                  <div className="flex space-x-2">
-                    {testimonials.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentTestimonial(index)}
-                        className={`w-2.5 h-2.5 rounded-full transition-all ${
-                          currentTestimonial === index
-                            ? "bg-blue w-5"
-                            : "bg-gray-300"
-                        }`}
-                        aria-label={`View testimonial ${index + 1}`}
-                      ></button>
-                    ))}
-                  </div>
-
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() =>
-                        setCurrentTestimonial(
-                          (prev) =>
-                            (prev - 1 + testimonials.length) %
-                            testimonials.length
-                        )
-                      }
-                      className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
-                      aria-label="Previous testimonial"
-                    >
-                      <FaChevronLeft size={14} className="text-gray-600" />
-                    </button>
-                    <button
-                      onClick={() =>
-                        setCurrentTestimonial(
-                          (prev) => (prev + 1) % testimonials.length
-                        )
-                      }
-                      className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
-                      aria-label="Next testimonial"
-                    >
-                      <FaChevronRight size={14} className="text-gray-600" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </motion.div>
         </div>
       </div>
