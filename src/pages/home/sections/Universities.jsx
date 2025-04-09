@@ -129,7 +129,7 @@ const Universities = () => {
         </p>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -145,9 +145,9 @@ const Universities = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white/40 backdrop-blur-md shadow-sm border border-white/50"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white/40 backdrop-blur-md shadow-sm border border-white/50 hover:shadow-md hover:bg-white/60 transition-all"
                 >
-                  <div className="mt-1 bg-blue/10 p-2 rounded-lg">
+                  <div className="mt-1 bg-blue/10 p-2 rounded-lg text-blue">
                     {feature.icon}
                   </div>
                   <div>
@@ -162,7 +162,7 @@ const Universities = () => {
               <a
                 href={universitiesContent.ctaLink}
                 target="_blank"
-                className="inline-flex items-center px-8 py-3 bg-blue text-white font-medium rounded-full hover:bg-blue/90 transition-colors"
+                className="inline-flex items-center px-8 py-3 bg-blue text-white font-medium rounded-full hover:bg-blue/90 transition-colors shadow-sm hover:shadow"
               >
                 {universitiesContent.ctaText} <FaArrowRight className="ml-2" />
               </a>
@@ -196,7 +196,7 @@ const Universities = () => {
                 {universitiesContent.description}
               </p>
             </div>
-            <div className="relative rounded-3xl overflow-hidden bg-white/30 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3]">
+            <div className="relative rounded-3xl overflow-hidden bg-white/30 backdrop-blur-md shadow-xl border border-white/50 aspect-[4/3] hover:shadow-2xl transition-shadow duration-300">
               <div className="absolute inset-0 bg-[url(/universities.avif)] bg-cover bg-center"></div>
               <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-purple/30"></div>
 

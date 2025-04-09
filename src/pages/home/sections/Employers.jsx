@@ -21,23 +21,18 @@ const Employers = () => {
       "Grow your business with fresh talent - access motivated, recently graduated technical professionals at a fraction of the usual cost.",
     features: [
       {
-        icon: <FaUserGraduate size={20} />,
-        title: "Access to Fresh Skills",
-        description:
-          "Access fresh skills from vetted graduates, reducing your team's hiring time and effort.",
-      },
-      {
         icon: <FaCalculator size={20} />,
         title: "Cost-Effective Talent",
         description:
           "Benefit from cost-sharing support, reducing your financial investment.",
       },
       {
-        icon: <FaHandshake size={20} />,
-        title: "Build Your Pipeline",
+        icon: <FaUserGraduate size={20} />,
+        title: "Access to Fresh Skills",
         description:
-          "Test potential employees in a low-risk environment before making permanent hires.",
+          "Access fresh skills from vetted graduates, reducing your team's hiring time and effort.",
       },
+
       {
         icon: <FaLightbulb size={20} />,
         title: "Drive Innovation",

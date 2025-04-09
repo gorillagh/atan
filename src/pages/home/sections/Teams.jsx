@@ -8,7 +8,7 @@ const Teams = () => {
       name: "David Kimani",
       role: "Founder & CEO",
       bio: "15+ years experience in tech education and workforce development across Africa.",
-      image: "/michael.webp", // Replace with actual image path
+      image: "", // Replace with actual image path
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
@@ -16,7 +16,7 @@ const Teams = () => {
       name: "Amara Nwosu",
       role: "Chief Operations Officer",
       bio: "Former director at Microsoft Africa with expertise in scaling technical operations.",
-      image: "/aminata.webp", // Replace with actual image path
+      image: "", // Replace with actual image path
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
@@ -24,7 +24,7 @@ const Teams = () => {
       name: "Jean-Paul Mbeki",
       role: "Partnership Director",
       bio: "Background in building university-industry collaborations across 12 African countries.",
-      image: "/michael.webp", // Replace with actual image path
+      image: "", // Replace with actual image path
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
@@ -32,7 +32,7 @@ const Teams = () => {
       name: "Fatima El-Rashid",
       role: "Technical Lead",
       bio: "Former Google engineer specializing in technical workforce development programs.",
-      image: "/sarah.webp", // Replace with actual image path
+      image: "", // Replace with actual image path
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
@@ -52,7 +52,7 @@ const Teams = () => {
             <div className="flex items-center gap-3 mb-4">
               <FaUsers className="text-orange text-2xl" />
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Our <span className="text-orange">Leadership Team</span>
+                The <span className="text-orange">Team</span>
               </h2>
             </div>
             <div className="w-20 h-1 bg-orange mx-auto my-4"></div>
