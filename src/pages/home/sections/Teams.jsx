@@ -144,7 +144,7 @@ const Teams = () => {
         </div>
 
         {/* Advisory board teaser - adds extra credibility */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -168,7 +168,7 @@ const Teams = () => {
               className="h-16 mt-6 md:mt-0"
             />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
