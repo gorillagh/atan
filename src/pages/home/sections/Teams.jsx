@@ -8,7 +8,7 @@ const Teams = () => {
       name: "David Kimani",
       role: "Founder & CEO",
       bio: "15+ years experience in tech education and workforce development across Africa.",
-      image: "", // Replace with actual image path
+      image: "/team1.avif",
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
@@ -16,7 +16,7 @@ const Teams = () => {
       name: "Amara Nwosu",
       role: "Chief Operations Officer",
       bio: "Former director at Microsoft Africa with expertise in scaling technical operations.",
-      image: "", // Replace with actual image path
+      image: "/team2.avif", // Replace with actual image path
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
