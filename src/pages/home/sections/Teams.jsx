@@ -5,34 +5,34 @@ import { FaUsers, FaLinkedin, FaTwitter } from "react-icons/fa";
 const Teams = () => {
   const teamMembers = [
     {
-      name: "David Kimani",
-      role: "Founder & CEO",
+      name: "Ivan Mbowa",
+      role: "West Africa Program Lead",
       bio: "15+ years experience in tech education and workforce development across Africa.",
-      image: "/team1.avif",
+      image: "/Ivan.avif",
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
     {
-      name: "Amara Nwosu",
-      role: "Chief Operations Officer",
+      name: "Maria Addolorata Nyaga",
+      role: "ATAN Associate Kenya",
       bio: "Former director at Microsoft Africa with expertise in scaling technical operations.",
-      image: "/team2.avif", // Replace with actual image path
+      image: "/Maria.avif", // Replace with actual image path
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
     {
-      name: "Jean-Paul Mbeki",
-      role: "Partnership Director",
+      name: "Emelia Dede Quist",
+      role: "ATAN Associate - Ghana",
       bio: "Background in building university-industry collaborations across 12 African countries.",
-      image: "", // Replace with actual image path
+      image: "/Emelia.avif", // Replace with actual image path
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
     {
-      name: "Fatima El-Rashid",
-      role: "Technical Lead",
+      name: "Rhema Andah",
+      role: "ATAN Associate",
       bio: "Former Google engineer specializing in technical workforce development programs.",
-      image: "", // Replace with actual image path
+      image: "/Rhema.avif", // Replace with actual image path
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
