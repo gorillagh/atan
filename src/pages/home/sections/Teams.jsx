@@ -75,7 +75,7 @@ const Teams = () => {
             >
               <div className="relative h-80 mb-6 rounded-2xl overflow-hidden bg-white/30 backdrop-blur-md shadow-xl border border-white/50 transition-all duration-300 group-hover:shadow-2xl group-hover:translate-y-[-5px]">
                 {/* Glass overlay effect */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-purple/70 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-10"></div>
 
                 {/* Image */}
                 <div
@@ -92,7 +92,7 @@ const Teams = () => {
                 </div>
 
                 {/* Bio that appears on hover */}
-                <div className="absolute inset-0 flex items-center justify-center p-6 bg-purple/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                {/* <div className="absolute inset-0 flex items-center justify-center p-6 bg-purple/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
                   <div className="text-center">
                     <p className="text-white mb-4">{member.bio}</p>
                     <div className="flex justify-center space-x-4">
@@ -114,7 +114,7 @@ const Teams = () => {
                       </a>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* Only visible on mobile */}
