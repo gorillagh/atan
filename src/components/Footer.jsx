@@ -10,6 +10,9 @@ const Footer = () => {
             {/* <div className="flex items-center mb-6">
               <img src="/atan-logo.png" alt="ATAN" className="h-10" />
             </div> */}
+            {/* <div className="flex items-center mb-6">
+              <h1 className="text-5xl">ATAN</h1>
+            </div> */}
             <p className="text-blue-100 mb-2">
               Connecting Africa's talent with opportunity through
               apprenticeships.
@@ -159,12 +162,12 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-blue-900/30 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <p className="text-blue-200 text-sm">
               © {new Date().getFullYear()} Africa Technical Apprenticeship
               Network (ATAN). All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            {/* <div className="flex space-x-6 mt-4 md:mt-0">
               <a
                 href="#"
                 className="text-blue-200 hover:text-white text-sm transition-colors"
@@ -183,7 +186,7 @@ const Footer = () => {
               >
                 Cookie Policy
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
