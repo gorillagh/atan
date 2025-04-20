@@ -148,15 +148,15 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-6">Contact</h4>
             <ul className="space-y-3 text-blue-100">
-              <li>info@atanafrica.com</li>
+              {/* <li>info@atanafrica.com</li> */}
               <li>+233 123 456 7890</li>
-              <li>
+              {/* <li>
                 ATAN Headquarters
                 <br />
                 123 Innovation Drive
                 <br />
                 Accra, Ghana
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

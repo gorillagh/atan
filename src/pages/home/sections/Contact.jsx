@@ -42,17 +42,17 @@ const Contact = () => {
             </h3>
 
             <div className="space-y-6">
-              <div>
+              {/* <div>
                 <h4 className="font-bold text-gray-900 mb-2">Email</h4>
                 <p className="text-purple">info@atanafrica.com</p>
-              </div>
+              </div> */}
 
               <div>
                 <h4 className="font-bold text-gray-900 mb-2">Phone</h4>
                 <p className="text-purple">+233 123 456 7890</p>
               </div>
 
-              <div>
+              {/* <div>
                 <h4 className="font-bold text-gray-900 mb-2">Address</h4>
                 <p className="text-gray-600">
                   ATAN Headquarters
@@ -61,7 +61,7 @@ const Contact = () => {
                   <br />
                   Accra, Ghana
                 </p>
-              </div>
+              </div> */}
 
               <div className="pt-4">
                 <h4 className="font-bold text-gray-900 mb-2">Follow Us</h4>
