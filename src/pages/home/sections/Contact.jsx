@@ -47,10 +47,10 @@ const Contact = () => {
                 <p className="text-purple">info@atanafrica.com</p>
               </div> */}
 
-              <div>
+              {/* <div>
                 <h4 className="font-bold text-gray-900 mb-2">Phone</h4>
                 <p className="text-purple">+233 123 456 7890</p>
-              </div>
+              </div> */}
 
               {/* <div>
                 <h4 className="font-bold text-gray-900 mb-2">Address</h4>

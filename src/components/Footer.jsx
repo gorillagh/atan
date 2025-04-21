@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-purple text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             {/* <div className="flex items-center mb-6">
               <img src="/atan-logo.png" alt="ATAN" className="h-10" />
@@ -145,20 +145,20 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h4 className="text-lg font-semibold text-white mb-6">Contact</h4>
             <ul className="space-y-3 text-blue-100">
-              {/* <li>info@atanafrica.com</li> */}
+              <li>info@atanafrica.com</li>
               <li>+233 123 456 7890</li>
-              {/* <li>
+              <li>
                 ATAN Headquarters
                 <br />
                 123 Innovation Drive
                 <br />
                 Accra, Ghana
-              </li> */}
+              </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-blue-900/30 mt-12 pt-8">
