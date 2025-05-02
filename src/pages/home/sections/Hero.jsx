@@ -44,7 +44,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 pt-6 flex flex-col justify-center relative overflow-hidden">
+    <div className="z-50 min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 pt-6 flex flex-col justify-center relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[20%] left-[10%] w-72 h-72 bg-orange/10 rounded-full blur-3xl"></div>

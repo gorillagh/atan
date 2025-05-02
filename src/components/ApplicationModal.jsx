@@ -38,7 +38,7 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
       id: "apprentice",
       title: "Apprentice",
       description: "Start your journey as a technical apprentice",
-      path: "https://docs.google.com/forms/d/1QqaMzo8JNZzq_HW-NbF4Whykbf1BuKmKTRXm9qEC2N8/viewform?ts=6798a257&edit_requested=true",
+      path: "https://forms.gle/W3N9RmLHDZEWcn2Z6",
       icon: <FaGraduationCap size={24} className="text-purple" />,
     },
     {
@@ -61,7 +61,7 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
       {/* Apply Now Modal */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[90] flex items-center justify-center p-4">
             <motion.div
               variants={modalVariants}
               initial="hidden"
