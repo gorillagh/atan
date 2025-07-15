@@ -38,7 +38,7 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
       id: "apprentice",
       title: "Apprentice",
       description: "Start your journey as a technical apprentice",
-      path: "https://forms.gle/W3N9RmLHDZEWcn2Z6",
+      path: "https://docs.google.com/forms/d/e/1FAIpQLSfPHPeWc8FbB99jihGCxXbCDs5VKjlDO2689srTy9NHNu3P4w/viewform",
       icon: <FaGraduationCap size={24} className="text-purple" />,
     },
     {
