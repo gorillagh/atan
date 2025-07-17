@@ -48,7 +48,7 @@ const Apprentices = () => {
     ctaText: "Apply as a Graduate",
     bgColor: "bg-gradient-to-b from-blue-50 to-gray-50",
     ctaLink:
-      "https://docs.google.com/forms/d/1QqaMzo8JNZzq_HW-NbF4Whykbf1BuKmKTRXm9qEC2N8/viewform?ts=6798a257&edit_requested=true",
+      "https://docs.google.com/forms/d/e/1FAIpQLSfPHPeWc8FbB99jihGCxXbCDs5VKjlDO2689srTy9NHNu3P4w/viewform?ts=6798a257&edit_requested=true",
   };
 
   return (
