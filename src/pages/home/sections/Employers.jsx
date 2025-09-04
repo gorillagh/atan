@@ -42,8 +42,8 @@ const Employers = () => {
     ctaText: "Join as an SME Partner",
     ctaSecondaryText: "Learn More",
     bgColor: "bg-gradient-to-b from-gray-50 to-gray-100",
-    ctaLink:
-      "https://docs.google.com/forms/d/e/1FAIpQLSfLAqoxl6C4PRUGSyvGPhcd3vA0N_nZ-M4O1WmTnwy8jaYNsQ/viewform",
+    ctaLink: "https://forms.gle/TZcHRgcGkxY4UU6w8",
+      // "https://docs.google.com/forms/d/e/1FAIpQLSfLAqoxl6C4PRUGSyvGPhcd3vA0N_nZ-M4O1WmTnwy8jaYNsQ/viewform",
   };
 
   return (
