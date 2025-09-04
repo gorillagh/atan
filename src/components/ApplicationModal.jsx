@@ -44,7 +44,8 @@ const ApplicationModal = ({ isModalOpen, toggleModal }) => {
     {
       id: "employer",
       title: "Employer",
-      path: "https://docs.google.com/forms/d/e/1FAIpQLSfLAqoxl6C4PRUGSyvGPhcd3vA0N_nZ-M4O1WmTnwy8jaYNsQ/viewform",
+      path:"https://forms.gle/TZcHRgcGkxY4UU6w8",
+        // "https://docs.google.com/forms/d/e/1FAIpQLSfLAqoxl6C4PRUGSyvGPhcd3vA0N_nZ-M4O1WmTnwy8jaYNsQ/viewform",
       description: "Partner with us to find talented apprentices",
       icon: <FaBuilding size={24} className="text-purple" />,
     },
