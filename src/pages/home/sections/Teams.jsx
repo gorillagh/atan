@@ -79,7 +79,7 @@ const Teams = () => {
 
                 {/* Image */}
                 <div
-                  className="absolute inset-0 bg-cover bg-center"
+                  className="absolute inset-0 bg-cover bg-top md:bg-center"
                   style={{ backgroundImage: `url("${member.image}")` }}
                 ></div>
 
