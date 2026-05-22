@@ -14,7 +14,7 @@ const Teams = () => {
     },
     {
       name: "Maria Addolorata Nyaga",
-      role: "ATAN Associate Kenya",
+      role: "Program Associate Kenya",
       bio: "Former director at Microsoft Africa with expertise in scaling technical operations.",
       image: "/Maria.avif",
       linkedin: "https://linkedin.com/in/username",
