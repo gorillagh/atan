@@ -5,10 +5,10 @@ import { FaUsers, FaLinkedin, FaTwitter } from "react-icons/fa";
 const Teams = () => {
   const teamMembers = [
     {
-      name: "Ivan Mbowa",
-      role: "West Africa Program Lead",
+      name: "Sam Jairo",
+      role: " Program Associate - Kenya",
       bio: "15+ years experience in tech education and workforce development across Africa.",
-      image: "/Ivan.avif",
+      image: "/Sam-Jairo.avif",
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
@@ -16,23 +16,23 @@ const Teams = () => {
       name: "Maria Addolorata Nyaga",
       role: "ATAN Associate Kenya",
       bio: "Former director at Microsoft Africa with expertise in scaling technical operations.",
-      image: "/Maria.avif", // Replace with actual image path
+      image: "/Maria.avif",
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
     {
-      name: "Emelia Dede Quist",
-      role: "ATAN Associate - Ghana",
+      name: "Esther Calista Afia Sarfo",
+      role: "Program Associate - Ghana",
       bio: "Background in building university-industry collaborations across 12 African countries.",
-      image: "/Emelia.avif", // Replace with actual image path
+      image: "/Esther%20Atan.avif",
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
     {
-      name: "Rhema Andah",
-      role: "ATAN Associate",
+      name: "Yao Selorm Kuatsinu",
+      role: "Program Associate -Ghana",
       bio: "Former Google engineer specializing in technical workforce development programs.",
-      image: "/Rhema.avif", // Replace with actual image path
+      image: "/selorm.avif",
       linkedin: "https://linkedin.com/in/username",
       twitter: "https://twitter.com/username",
     },
@@ -80,7 +80,7 @@ const Teams = () => {
                 {/* Image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${member.image})` }}
+                  style={{ backgroundImage: `url("${member.image}")` }}
                 ></div>
 
                 {/* Frosted glass name card that slides up on hover */}
