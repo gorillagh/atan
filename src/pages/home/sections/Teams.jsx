@@ -1,40 +1,40 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaUsers, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaUsers, FaLinkedin, FaUser } from "react-icons/fa";
 
 const Teams = () => {
   const teamMembers = [
     {
       name: "Sam Jairo",
-      role: " Program Associate - Kenya",
-      bio: "15+ years experience in tech education and workforce development across Africa.",
+      role: "Program Associate - Kenya",
+      // bio: "15+ years experience in tech education and workforce development across Africa.",
       image: "/Sam-Jairo.avif",
-      linkedin: "https://linkedin.com/in/username",
-      twitter: "https://twitter.com/username",
+      linkedin: "https://www.linkedin.com/in/sam-jairo/",
+      bioLink: "https://www.gdiafrica.org/sam-jairo/",
     },
     {
       name: "Maria Addolorata Nyaga",
-      role: "Program Associate Kenya",
-      bio: "Former director at Microsoft Africa with expertise in scaling technical operations.",
+      role: "Program Associate - Kenya",
+      // bio: "Former director at Microsoft Africa with expertise in scaling technical operations.",
       image: "/Maria.avif",
-      linkedin: "https://linkedin.com/in/username",
-      twitter: "https://twitter.com/username",
+      linkedin: "https://www.linkedin.com/in/maria-nyaga/",
+      bioLink: "https://www.gdiafrica.org/addolorata-nyaga/",
     },
     {
       name: "Esther Calista Afia Sarfo",
-      role: "Program Associate - Ghana",
-      bio: "Background in building university-industry collaborations across 12 African countries.",
+      role: "Program Associate - Ghana",
+      // bio: "Background in building university-industry collaborations across 12 African countries.",
       image: "/Esther%20Atan.avif",
-      linkedin: "https://linkedin.com/in/username",
-      twitter: "https://twitter.com/username",
+      linkedin: "https://www.linkedin.com/in/esther-calista-afia-sarfo-529b2ba9/",
+      bioLink: "https://www.gdiafrica.org/esther-calista-afia-sarfo/",
     },
     {
       name: "Yao Selorm Kuatsinu",
-      role: "Program Associate -Ghana",
-      bio: "Former Google engineer specializing in technical workforce development programs.",
+      role: "Program Associate - Ghana",
+      // bio: "Former Google engineer specializing in technical workforce development programs.",
       image: "/selorm.avif",
-      linkedin: "https://linkedin.com/in/username",
-      twitter: "https://twitter.com/username",
+      linkedin: "https://www.linkedin.com/in/yaoselormkuatsinu/",
+      bioLink: "https://www.gdiafrica.org/selorm-kuatsinu/",
     },
   ];
 
@@ -91,7 +91,7 @@ const Teams = () => {
                   <p className="text-orange font-medium">{member.role}</p>
                 </div>
 
-                {/* Bio that appears on hover */}
+                {/* Bio that appears on hover (legacy overlay fallback, updated to use bioLink/FaUser) */}
                 {/* <div className="absolute inset-0 flex items-center justify-center p-6 bg-purple/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
                   <div className="text-center">
                     <p className="text-white mb-4">{member.bio}</p>
@@ -105,12 +105,12 @@ const Teams = () => {
                         <FaLinkedin size={24} />
                       </a>
                       <a
-                        href={member.twitter}
+                        href={member.bioLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white hover:text-orange transition-colors"
                       >
-                        <FaTwitter size={24} />
+                        <FaUser size={24} />
                       </a>
                     </div>
                   </div>
@@ -118,7 +118,7 @@ const Teams = () => {
               </div>
 
               {/* Only visible on mobile */}
-              <div className="block md:hidden">
+              <div className="block md:hidden mt-2 px-1">
                 <p className="text-gray-600 text-sm">{member.bio}</p>
                 <div className="flex space-x-3 mt-2">
                   <a
@@ -129,14 +129,16 @@ const Teams = () => {
                   >
                     <FaLinkedin size={20} />
                   </a>
-                  <a
-                    href={member.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-purple hover:text-orange transition-colors"
-                  >
-                    <FaTwitter size={20} />
-                  </a>
+                  {member.bioLink && (
+                    <a
+                      href={member.bioLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-purple hover:text-orange transition-colors"
+                    >
+                      <FaUser size={20} />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
